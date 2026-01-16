@@ -1,0 +1,7 @@
+parent_config: ../.swiftlint.yml
+
+included:
+  - Production
+
+excluded:
+  - Tests
