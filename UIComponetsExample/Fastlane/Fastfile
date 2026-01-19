@@ -13,7 +13,7 @@ platform :ios do
 
   private_lane :unit_test do
     scan(
-      workspace: configuration.app_workspace,
+      project: configuration.app_project,
       scheme: configuration.app_scheme,
       devices: configuration.scan_devices,
       testplan: configuration.app_test_plan,
@@ -25,7 +25,6 @@ platform :ios do
 
   private_lane :convert_coverage do
     slather(
-      workspace: configuration.app_workspace,
       proj: configuration.app_project,
       scheme: configuration.app_scheme,
       output_directory: configuration.scan_output_directory,

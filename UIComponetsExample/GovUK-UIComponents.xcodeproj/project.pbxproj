@@ -13,6 +13,9 @@
 		5D0278532C2AA90F00F2A4EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D0278522C2AA90F00F2A4EB /* Assets.xcassets */; };
 		5D0278562C2AA90F00F2A4EB /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 5D0278552C2AA90F00F2A4EB /* Base */; };
 		5D3437712F190B2A00AF4CC4 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D3437702F190B2A00AF4CC4 /* UIComponents */; };
+		5D93A6972F1EC9D300C31BDF /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D93A6962F1EC9D300C31BDF /* UIComponents */; };
+		5D94C9E02F1EB9D50041CFA9 /* GovKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D94C9DF2F1EB9D50041CFA9 /* GovKit */; };
+		5D94C9E22F1EB9D50041CFA9 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5D94C9E12F1EB9D50041CFA9 /* UIComponents */; };
 		5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */; };
 		5DC206A72F190BFE009D8547 /* UIComponents in Frameworks */ = {isa = PBXBuildFile; productRef = 5DC206A62F190BFE009D8547 /* UIComponents */; };
 		5DD6F2FE2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DD6F2FD2CC28207005BC5D3 /* SwiftUIComponentsScreen.swift */; };
@@ -115,8 +118,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D94C9E22F1EB9D50041CFA9 /* UIComponents in Frameworks */,
 				5DC206A72F190BFE009D8547 /* UIComponents in Frameworks */,
+				5D94C9E02F1EB9D50041CFA9 /* GovKit in Frameworks */,
 				5D3437712F190B2A00AF4CC4 /* UIComponents in Frameworks */,
+				5D93A6972F1EC9D300C31BDF /* UIComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,6 +263,9 @@
 			packageProductDependencies = (
 				5D3437702F190B2A00AF4CC4 /* UIComponents */,
 				5DC206A62F190BFE009D8547 /* UIComponents */,
+				5D94C9DF2F1EB9D50041CFA9 /* GovKit */,
+				5D94C9E12F1EB9D50041CFA9 /* UIComponents */,
+				5D93A6962F1EC9D300C31BDF /* UIComponents */,
 			);
 			productName = "GovUK-UIComponents";
 			productReference = 5D0278462C2AA90900F2A4EB /* govuk_uicomponents_ios.app */;
@@ -357,7 +366,7 @@
 			mainGroup = 5D02783D2C2AA90900F2A4EB;
 			packageReferences = (
 				5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
-				5DC206A52F190BFE009D8547 /* XCLocalSwiftPackageReference "../../GovKit" */,
+				5D93A6952F1EC9D300C31BDF /* XCLocalSwiftPackageReference "../../govuk-mobile-ios-gov-kit" */,
 			);
 			productRefGroup = 5D0278472C2AA90900F2A4EB /* Products */;
 			projectDirPath = "";
@@ -837,9 +846,9 @@
 /* End XCConfigurationList section */
 
 /* Begin XCLocalSwiftPackageReference section */
-		5DC206A52F190BFE009D8547 /* XCLocalSwiftPackageReference "../../GovKit" */ = {
+		5D93A6952F1EC9D300C31BDF /* XCLocalSwiftPackageReference "../../govuk-mobile-ios-gov-kit" */ = {
 			isa = XCLocalSwiftPackageReference;
-			relativePath = ../../GovKit;
+			relativePath = "../../govuk-mobile-ios-gov-kit";
 		};
 /* End XCLocalSwiftPackageReference section */
 
@@ -856,6 +865,18 @@
 
 /* Begin XCSwiftPackageProductDependency section */
 		5D3437702F190B2A00AF4CC4 /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+		5D93A6962F1EC9D300C31BDF /* UIComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = UIComponents;
+		};
+		5D94C9DF2F1EB9D50041CFA9 /* GovKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GovKit;
+		};
+		5D94C9E12F1EB9D50041CFA9 /* UIComponents */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = UIComponents;
 		};
