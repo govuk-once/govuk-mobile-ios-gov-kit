@@ -77,23 +77,18 @@ public struct Constants {
 
         public static let defaultSearchUrl: URL = URL(string: "https://search.service.gov.uk")!
 
-        @MainActor
         public static var searchSuggestionsPath: String = "/api/search/autocomplete.json"
 
-        @MainActor
         public static var defaultSearchPath: String = "/v0_1/search.json"
 
         public static let authenticationCallbackUri: String = "govuk://govuk/login-auth-callback"
 
-        @MainActor
         public static var defaultLocalAuthorityURL: URL = URL(
             string: "https://www.gov.uk"
         )!
 
-        @MainActor
         public static var localAuthorityPath: String = "/api/local-authority"
 
-        @MainActor
         public static var manageAccountURL: URL = URL(
             string: "https://home.account.gov.uk/"
         )!
