@@ -22,7 +22,12 @@
         "key" : "FB_REFERENCE_IMAGE_DIR",
         "value" : "$(PROJECT_DIR)\/Tests\/govuk_uicomponents_ios\/govuk_uicomponents_ios_snapshot_tests\/ReferenceImages"
       }
-    ]
+    ],
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:UIComponetsExample\/GovUK-UIComponents.xcodeproj",
+      "identifier" : "5D0278452C2AA90900F2A4EB",
+      "name" : "govuk_uicomponents_ios"
+    }
   },
   "testTargets" : [
     {
