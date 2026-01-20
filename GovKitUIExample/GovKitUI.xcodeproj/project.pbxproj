@@ -1,0 +1,656 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 70;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D94C9E02F1EB9D50041CFA9 /* GovKit in Frameworks */ = {isa = PBXBuildFile; productRef = 5D94C9DF2F1EB9D50041CFA9 /* GovKit */; };
+		5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */ = {isa = PBXBuildFile; productRef = 5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */; };
+		5DE545C52F201C5000FDA52A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5DE545AD2F201C5000FDA52A /* Assets.xcassets */; };
+		5DE545C62F201C5000FDA52A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5DE545B12F201C5000FDA52A /* LaunchScreen.storyboard */; };
+		5DE545C72F201C5000FDA52A /* ButtonTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545B82F201C5000FDA52A /* ButtonTestingViewController.swift */; };
+		5DE545C82F201C5000FDA52A /* HostingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545AE2F201C5000FDA52A /* HostingViewController.swift */; };
+		5DE545C92F201C5000FDA52A /* SwiftUIComponentsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BE2F201C5000FDA52A /* SwiftUIComponentsScreen.swift */; };
+		5DE545CA2F201C5000FDA52A /* TestSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BF2F201C5000FDA52A /* TestSelectionViewController.swift */; };
+		5DE545CB2F201C5000FDA52A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545B32F201C5000FDA52A /* AppDelegate.swift */; };
+		5DE545CC2F201C5000FDA52A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545C12F201C5000FDA52A /* ViewController.swift */; };
+		5DE545CD2F201C5000FDA52A /* FontTestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BB2F201C5000FDA52A /* FontTestingViewController.swift */; };
+		5DE545CE2F201C5000FDA52A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545B52F201C5000FDA52A /* SceneDelegate.swift */; };
+		5DE545CF2F201C5000FDA52A /* StrokesColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BC2F201C5000FDA52A /* StrokesColoursViewController.swift */; };
+		5DE545D02F201C5000FDA52A /* SwiftUIButtonStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BD2F201C5000FDA52A /* SwiftUIButtonStateView.swift */; };
+		5DE545D12F201C5000FDA52A /* ColourSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545B92F201C5000FDA52A /* ColourSelectionViewController.swift */; };
+		5DE545D22F201C5000FDA52A /* FillsColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545BA2F201C5000FDA52A /* FillsColoursViewController.swift */; };
+		5DE545D32F201C5000FDA52A /* ButtonStateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545B72F201C5000FDA52A /* ButtonStateViewController.swift */; };
+		5DE545D42F201C5000FDA52A /* TextColoursViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DE545C02F201C5000FDA52A /* TextColoursViewController.swift */; };
+		5DF661F62F2018D50060C4B7 /* GovKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 5DF661F52F2018D50060C4B7 /* GovKitUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5DB0C0702CC247F200C4E010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D02783E2C2AA90900F2A4EB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D0278452C2AA90900F2A4EB;
+			remoteInfo = govuk_uicomponents_ios;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5D0278462C2AA90900F2A4EB /* govkit_ui_ios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = govkit_ui_ios.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DB0C06C2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = govkit_ui_ios_snapshot_tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5DE545AD2F201C5000FDA52A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5DE545AE2F201C5000FDA52A /* HostingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingViewController.swift; sourceTree = "<group>"; };
+		5DE545B02F201C5000FDA52A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5DE545B32F201C5000FDA52A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5DE545B42F201C5000FDA52A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DE545B52F201C5000FDA52A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5DE545B72F201C5000FDA52A /* ButtonStateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStateViewController.swift; sourceTree = "<group>"; };
+		5DE545B82F201C5000FDA52A /* ButtonTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonTestingViewController.swift; sourceTree = "<group>"; };
+		5DE545B92F201C5000FDA52A /* ColourSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourSelectionViewController.swift; sourceTree = "<group>"; };
+		5DE545BA2F201C5000FDA52A /* FillsColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillsColoursViewController.swift; sourceTree = "<group>"; };
+		5DE545BB2F201C5000FDA52A /* FontTestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontTestingViewController.swift; sourceTree = "<group>"; };
+		5DE545BC2F201C5000FDA52A /* StrokesColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrokesColoursViewController.swift; sourceTree = "<group>"; };
+		5DE545BD2F201C5000FDA52A /* SwiftUIButtonStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIButtonStateView.swift; sourceTree = "<group>"; };
+		5DE545BE2F201C5000FDA52A /* SwiftUIComponentsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsScreen.swift; sourceTree = "<group>"; };
+		5DE545BF2F201C5000FDA52A /* TestSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSelectionViewController.swift; sourceTree = "<group>"; };
+		5DE545C02F201C5000FDA52A /* TextColoursViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextColoursViewController.swift; sourceTree = "<group>"; };
+		5DE545C12F201C5000FDA52A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5DF996282F201E0B002CC835 /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/SnapshotTestCase.swift,
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/Specs/CentreCardViewSnapshotTests.swift,
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/Specs/GOVUKButtonSnapshotTests.swift,
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/Specs/GOVUKUIComponentsSnapshotTests.swift,
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/Specs/SectionHeaderLabelViewSnapshotTests.swift,
+				govkit_ui_ios/govkit_ui_ios_snapshot_tests/Specs/SwiftUIButtonSnapshotTests.swift,
+			);
+			target = 5DB0C06B2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		5DFBF33B2CD0E8F900961CD3 /* Tests */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (5DF996282F201E0B002CC835 /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = Tests; sourceTree = "<group>"; };
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D0278432C2AA90900F2A4EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D94C9E02F1EB9D50041CFA9 /* GovKit in Frameworks */,
+				5DF661F62F2018D50060C4B7 /* GovKitUI in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB0C0692CC247F200C4E010 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DB0C0772CC2486F00C4E010 /* iOSSnapshotTestCase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D02783D2C2AA90900F2A4EB = {
+			isa = PBXGroup;
+			children = (
+				5D7240F82C2AAD2C00B2D70A /* Production */,
+				5DFBF33B2CD0E8F900961CD3 /* Tests */,
+				5D0278472C2AA90900F2A4EB /* Products */,
+				5D71C0D82C2AD02F00E25DA5 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D0278472C2AA90900F2A4EB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D0278462C2AA90900F2A4EB /* govkit_ui_ios.app */,
+				5DB0C06C2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D71C0D82C2AD02F00E25DA5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D7240F82C2AAD2C00B2D70A /* Production */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545C32F201C5000FDA52A /* govkit_ui_ios */,
+			);
+			path = Production;
+			sourceTree = "<group>";
+		};
+		5DE545AF2F201C5000FDA52A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545AD2F201C5000FDA52A /* Assets.xcassets */,
+				5DE545AE2F201C5000FDA52A /* HostingViewController.swift */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		5DE545B22F201C5000FDA52A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545B12F201C5000FDA52A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5DE545B62F201C5000FDA52A /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545B32F201C5000FDA52A /* AppDelegate.swift */,
+				5DE545B42F201C5000FDA52A /* Info.plist */,
+				5DE545B52F201C5000FDA52A /* SceneDelegate.swift */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		5DE545C22F201C5000FDA52A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545B72F201C5000FDA52A /* ButtonStateViewController.swift */,
+				5DE545B82F201C5000FDA52A /* ButtonTestingViewController.swift */,
+				5DE545B92F201C5000FDA52A /* ColourSelectionViewController.swift */,
+				5DE545BA2F201C5000FDA52A /* FillsColoursViewController.swift */,
+				5DE545BB2F201C5000FDA52A /* FontTestingViewController.swift */,
+				5DE545BC2F201C5000FDA52A /* StrokesColoursViewController.swift */,
+				5DE545BD2F201C5000FDA52A /* SwiftUIButtonStateView.swift */,
+				5DE545BE2F201C5000FDA52A /* SwiftUIComponentsScreen.swift */,
+				5DE545BF2F201C5000FDA52A /* TestSelectionViewController.swift */,
+				5DE545C02F201C5000FDA52A /* TextColoursViewController.swift */,
+				5DE545C12F201C5000FDA52A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		5DE545C32F201C5000FDA52A /* govkit_ui_ios */ = {
+			isa = PBXGroup;
+			children = (
+				5DE545AF2F201C5000FDA52A /* Resources */,
+				5DE545B22F201C5000FDA52A /* Storyboards */,
+				5DE545B62F201C5000FDA52A /* SupportingFiles */,
+				5DE545C22F201C5000FDA52A /* ViewControllers */,
+			);
+			path = govkit_ui_ios;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D0278452C2AA90900F2A4EB /* govkit_ui_ios */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D0278702C2AA91000F2A4EB /* Build configuration list for PBXNativeTarget "govkit_ui_ios" */;
+			buildPhases = (
+				5DB3717F2F19036300284438 /* Lint */,
+				5D0278422C2AA90900F2A4EB /* Sources */,
+				5D0278432C2AA90900F2A4EB /* Frameworks */,
+				5D0278442C2AA90900F2A4EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = govkit_ui_ios;
+			packageProductDependencies = (
+				5D94C9DF2F1EB9D50041CFA9 /* GovKit */,
+				5DF661F52F2018D50060C4B7 /* GovKitUI */,
+			);
+			productName = "GovUK-UIComponents";
+			productReference = 5D0278462C2AA90900F2A4EB /* govkit_ui_ios.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5DB0C06B2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DB0C0742CC247F200C4E010 /* Build configuration list for PBXNativeTarget "govkit_ui_ios_snapshot_tests" */;
+			buildPhases = (
+				5DB0C0682CC247F200C4E010 /* Sources */,
+				5DB0C0692CC247F200C4E010 /* Frameworks */,
+				5DB0C06A2CC247F200C4E010 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5DB0C0712CC247F200C4E010 /* PBXTargetDependency */,
+			);
+			name = govkit_ui_ios_snapshot_tests;
+			packageProductDependencies = (
+				5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */,
+			);
+			productName = govuk_uicomponents_ios_snapshot_tests;
+			productReference = 5DB0C06C2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D02783E2C2AA90900F2A4EB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 2620;
+				TargetAttributes = {
+					5D0278452C2AA90900F2A4EB = {
+						CreatedOnToolsVersion = 15.4;
+					};
+					5DB0C06B2CC247F200C4E010 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 5D0278452C2AA90900F2A4EB;
+					};
+				};
+			};
+			buildConfigurationList = 5D0278412C2AA90900F2A4EB /* Build configuration list for PBXProject "GovKitUI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D02783D2C2AA90900F2A4EB;
+			packageReferences = (
+				5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */,
+				5D93A6952F1EC9D300C31BDF /* XCLocalSwiftPackageReference "../../govuk-mobile-ios-gov-kit" */,
+			);
+			productRefGroup = 5D0278472C2AA90900F2A4EB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D0278452C2AA90900F2A4EB /* govkit_ui_ios */,
+				5DB0C06B2CC247F200C4E010 /* govkit_ui_ios_snapshot_tests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D0278442C2AA90900F2A4EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE545C52F201C5000FDA52A /* Assets.xcassets in Resources */,
+				5DE545C62F201C5000FDA52A /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB0C06A2CC247F200C4E010 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5DB3717F2F19036300284438 /* Lint */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Lint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nif which swiftlint >/dev/null; then\n    swiftlint --strict\nelse\n  echo \"warning: SwiftLint not installed, please run brew install swiftlint\"\nfi\n\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D0278422C2AA90900F2A4EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE545C72F201C5000FDA52A /* ButtonTestingViewController.swift in Sources */,
+				5DE545C82F201C5000FDA52A /* HostingViewController.swift in Sources */,
+				5DE545C92F201C5000FDA52A /* SwiftUIComponentsScreen.swift in Sources */,
+				5DE545CA2F201C5000FDA52A /* TestSelectionViewController.swift in Sources */,
+				5DE545CB2F201C5000FDA52A /* AppDelegate.swift in Sources */,
+				5DE545CC2F201C5000FDA52A /* ViewController.swift in Sources */,
+				5DE545CD2F201C5000FDA52A /* FontTestingViewController.swift in Sources */,
+				5DE545CE2F201C5000FDA52A /* SceneDelegate.swift in Sources */,
+				5DE545CF2F201C5000FDA52A /* StrokesColoursViewController.swift in Sources */,
+				5DE545D02F201C5000FDA52A /* SwiftUIButtonStateView.swift in Sources */,
+				5DE545D12F201C5000FDA52A /* ColourSelectionViewController.swift in Sources */,
+				5DE545D22F201C5000FDA52A /* FillsColoursViewController.swift in Sources */,
+				5DE545D32F201C5000FDA52A /* ButtonStateViewController.swift in Sources */,
+				5DE545D42F201C5000FDA52A /* TextColoursViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5DB0C0682CC247F200C4E010 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5DB0C0712CC247F200C4E010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D0278452C2AA90900F2A4EB /* govkit_ui_ios */;
+			targetProxy = 5DB0C0702CC247F200C4E010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5DE545B12F201C5000FDA52A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5DE545B02F201C5000FDA52A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D02786E2C2AA91000F2A4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = N8W395F695;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D02786F2C2AA91000F2A4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = N8W395F695;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.1;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D0278712C2AA91000F2A4EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Production/govkit_ui_ios/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.gov.govkit.uicomponents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D0278722C2AA91000F2A4EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Production/govkit_ui_ios/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 0.0.1;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.gov.govkit.uicomponents;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5DB0C0722CC247F200C4E010 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.gov.govuk-uicomponents-ios-snapshot-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govkit_ui_ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govkit_ui_ios";
+			};
+			name = Debug;
+		};
+		5DB0C0732CC247F200C4E010 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "uk.gov.govuk-uicomponents-ios-snapshot-tests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/govkit_ui_ios.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/govkit_ui_ios";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D0278412C2AA90900F2A4EB /* Build configuration list for PBXProject "GovKitUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D02786E2C2AA91000F2A4EB /* Debug */,
+				5D02786F2C2AA91000F2A4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D0278702C2AA91000F2A4EB /* Build configuration list for PBXNativeTarget "govkit_ui_ios" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D0278712C2AA91000F2A4EB /* Debug */,
+				5D0278722C2AA91000F2A4EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DB0C0742CC247F200C4E010 /* Build configuration list for PBXNativeTarget "govkit_ui_ios_snapshot_tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5DB0C0722CC247F200C4E010 /* Debug */,
+				5DB0C0732CC247F200C4E010 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		5D93A6952F1EC9D300C31BDF /* XCLocalSwiftPackageReference "../../govuk-mobile-ios-gov-kit" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../govuk-mobile-ios-gov-kit";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/ios-snapshot-test-case";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5D94C9DF2F1EB9D50041CFA9 /* GovKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = GovKit;
+		};
+		5DB0C0762CC2486F00C4E010 /* iOSSnapshotTestCase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5DB0C0752CC2486F00C4E010 /* XCRemoteSwiftPackageReference "ios-snapshot-test-case" */;
+			productName = iOSSnapshotTestCase;
+		};
+		5DF661F52F2018D50060C4B7 /* GovKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5D93A6952F1EC9D300C31BDF /* XCLocalSwiftPackageReference "../../govuk-mobile-ios-gov-kit" */;
+			productName = GovKitUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 5D02783E2C2AA90900F2A4EB /* Project object */;
+}
