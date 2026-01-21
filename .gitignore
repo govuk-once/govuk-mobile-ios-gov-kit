@@ -95,10 +95,10 @@ secrets.xcconfig
 
 #Unit tests
 test_output
-UIComponentsExample/build_for_unit_testing/
+GovKitUIExample/build_for_unit_testing/
 
 #Build
-UIComponentsExample/build_output/
+GovKitUIExample/build_output/
 
 #Snapshot tests
 **/FailureDiffs/**
