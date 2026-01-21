@@ -12,15 +12,15 @@ let package = Package(
             targets: ["GovKit"]
         ),
         .library(
-            name: "UIComponents",
-            targets: ["UIComponents"]
+            name: "GovKitUI",
+            targets: ["GovKitUI"]
         )
     ],
     targets: [
         .target(
             name: "GovKit",
             dependencies: [
-                "UIComponents"
+                "GovKitUI"
             ],
             path: "GovKit",
             sources: [
@@ -31,8 +31,8 @@ let package = Package(
             ]
         ),
         .target(
-            name: "UIComponents",
-            path: "UIComponents",
+            name: "GovKitUI",
+            path: "GovKitUI",
             sources: [
                 "Sources"
             ]
@@ -46,9 +46,9 @@ let package = Package(
             ]
         ),
         .testTarget(
-            name: "UIComponentsTests",
-            dependencies: ["UIComponents"],
-            path: "UIComponents",
+            name: "GovKitUITests",
+            dependencies: ["GovKitUI"],
+            path: "GovKitUI",
             sources: [
                 "Tests"
             ]

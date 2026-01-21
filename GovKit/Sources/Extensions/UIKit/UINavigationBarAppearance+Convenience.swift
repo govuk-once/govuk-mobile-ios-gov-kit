@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-import UIComponents
+import GovKitUI
 
 extension UINavigationBarAppearance {
     public static var govUK: UINavigationBarAppearance {

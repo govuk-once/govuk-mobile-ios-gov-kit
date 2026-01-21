@@ -1,5 +1,5 @@
 included:
-  - UIComponents/Sources
+  - GovKitUI/Sources
 
 analyzer_rules:
 - unused_import
