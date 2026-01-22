@@ -317,17 +317,17 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
-    func surfaceChatBlue_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceChatBlue
+    func surfaceChatAnswer_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatAnswer
 
         #expect(result.lightMode == .white)
     }
 
     @Test
-    func surfaceChatBlue_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceChatBlue
+    func surfaceChatAnswer_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceChatAnswer
 
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.darkMode == .blueDarker70)
     }
 
     @Test
@@ -348,14 +348,14 @@ struct GOVUKColors_FillsTests {
     func surfaceChatQuestion_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatQuestion
 
-        #expect(result.lightMode == .white.withAlphaComponent(0.5))
+        #expect(result.lightMode == .blueDarker50)
     }
 
     @Test
     func surfaceChatQuestion_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceChatQuestion
 
-        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.5))
+        #expect(result.darkMode == .primaryBlue)
     }
 
     @Test
