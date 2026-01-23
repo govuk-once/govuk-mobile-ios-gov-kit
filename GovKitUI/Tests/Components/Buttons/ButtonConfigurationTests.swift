@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Testing
 
-@testable import UIComponents
+@testable import GovKitUI
 
 @MainActor
 @Suite

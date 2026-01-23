@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import UIComponents
+@testable import GovKitUI
 
 final class SwiftUIButtonTests: XCTestCase {
     var sut: SwiftUIButton!
@@ -32,7 +32,7 @@ extension SwiftUIButtonTests {
         let reflection = Mirror(reflecting: sut.body)
 
         let wrapped = reflection.children.first(where: { label, value in
-            value is UIComponents.SwiftUIWrappedButton
+            value is GovKitUI.SwiftUIWrappedButton
         })
 
         let wrappedButton = try? XCTUnwrap(wrapped?.value as? SwiftUIWrappedButton)
