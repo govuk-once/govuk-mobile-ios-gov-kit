@@ -184,41 +184,6 @@ extension GOVUKColors {
             )
         }()
 
-        public static let surfaceChatAnswer: UIColor = {
-            .init(
-                light: .white,
-                dark: .blueDarker70
-            )
-        }()
-
-        public static let surfaceChatAction: UIColor = {
-            .init(
-                light: .white,
-                dark: .blueDarker50
-            )
-        }()
-
-        public static let surfaceChatQuestion: UIColor = {
-            .init(
-                light: .blueDarker50,
-                dark: .primaryBlue
-            )
-        }()
-
-        public static let surfaceChatBackground: UIColor = {
-            .init(
-                light: .blueLighter90,
-                dark: .blueDarker80
-            )
-        }()
-
-        public static let surfaceChatOnboardingListBackground: UIColor = {
-            .init(
-                light: .blueLighter90,
-                dark: .blueDarker70
-            )
-        }()
-
         public static let surfaceCardEmergencyNotableDeath: UIColor = {
             .init(
                 light: .black,

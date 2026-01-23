@@ -175,15 +175,6 @@ struct GOVUKColors_TextTests {
         #expect(result.darkMode == .white)
     }
 
-
-    @Test
-    func chatTextArea_returnsExpectedResult() {
-        let result = UIColor.govUK.text.chatTextArea
-
-        #expect(result.lightMode == .grey700)
-        #expect(result.darkMode == .white)
-    }
-
     @Test
     func listSelected_returnsExpectedResult() {
         let result = UIColor.govUK.text.listSelected
