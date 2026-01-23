@@ -13,6 +13,11 @@ struct ConstantsTests {
     }
 
     @Test
+    func govukBaseComponents_returnsExpectedResult() {
+        #expect(Constants.API.govukBaseComponents.string == "https://www.gov.uk")
+    }
+
+    @Test
     func appStoreAppUrl_returnsExpectedResult() {
         #expect(Constants.API.appStoreAppUrl.absoluteString == "https://beta.itunes.apple.com/v1/app/6572293285")
     }

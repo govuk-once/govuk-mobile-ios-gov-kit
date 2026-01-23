@@ -1,7 +1,7 @@
 import XCTest
 import SwiftUI
 
-@testable import UIComponents
+@testable import GovKitUI
 
 @MainActor
 final class AdaptiveStackTests: XCTestCase {
