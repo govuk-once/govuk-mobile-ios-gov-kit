@@ -100,45 +100,10 @@ extension GOVUKColors {
             )
         }()
 
-        public static let focusedChatTextBox: UIColor = {
-            .init(
-                light: .primaryBlue,
-                dark: .accentBlue
-            )
-        }()
-
         public static let fixedContainer: UIColor = {
             .init(
                 light: .black.withAlphaComponent(0.3),
                 dark: .white.withAlphaComponent(0.3)
-            )
-        }()
-
-        public static let chatAnswer: UIColor = {
-            .init(
-                light: .clear,
-                dark: .blueDarker25
-            )
-        }()
-
-        public static let chatDivider: UIColor = {
-            .init(
-                light: .blueLighter80,
-                dark: .blueDarker25
-            )
-        }()
-
-        public static let chatAction: UIColor = {
-            .init(
-                light: .grey300,
-                dark: .blueLighter25
-            )
-        }()
-
-        public static let chatOnboardingListDivider: UIColor = {
-            .init(
-                light: .blueLighter80,
-                dark: .blueDarker50
             )
         }()
 

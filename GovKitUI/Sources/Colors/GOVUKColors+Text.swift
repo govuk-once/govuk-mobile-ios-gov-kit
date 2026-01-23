@@ -150,13 +150,6 @@ extension GOVUKColors {
             )
         }()
 
-        public static let chatTextArea: UIColor = {
-            .init(
-                light: .grey700,
-                dark: .white
-            )
-        }()
-
         public static let listSelected: UIColor = {
             .init(
                 light: .white,
