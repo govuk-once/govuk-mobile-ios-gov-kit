@@ -20,7 +20,6 @@ class TextColoursViewController: UIViewController {
         ("Button Compact Focussed", .govUK.text.buttonCompactFocussed),
         ("Button Compact Disabled", .govUK.text.buttonCompactDisabled),
         ("Trailing Icon", .govUK.text.trailingIcon),
-        ("Chat Text Area", .govUK.text.chatTextArea),
         ("List Selected", .govUK.text.listSelected),
         ("List Unselected", .govUK.text.listUnselected)
     ]

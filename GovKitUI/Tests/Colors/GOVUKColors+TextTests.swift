@@ -2,7 +2,7 @@ import Foundation
 import UIKit
 import Testing
 
-@testable import UIComponents
+@testable import GovKitUI
 
 @Suite
 @MainActor
@@ -172,15 +172,6 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.iconTertiary
 
         #expect(result.lightMode == .primaryBlue)
-        #expect(result.darkMode == .white)
-    }
-
-
-    @Test
-    func chatTextArea_returnsExpectedResult() {
-        let result = UIColor.govUK.text.chatTextArea
-
-        #expect(result.lightMode == .grey700)
         #expect(result.darkMode == .white)
     }
 
