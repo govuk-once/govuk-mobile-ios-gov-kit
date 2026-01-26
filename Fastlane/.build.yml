@@ -1,9 +1,9 @@
 
 default: &DEFAULTS
   app: &APP_DEFAULTS
-    scheme: GovKitUIExample
-    project: GovKitUIExample/GovKitUI.xcodeproj
-    test_plan: GovKitUI
+    scheme: GovKitExample
+    project: GovKitExample/GovKitExample.xcodeproj
+    test_plan: GovKitExample
   scan:
     output_directory: test_output
     devices:
