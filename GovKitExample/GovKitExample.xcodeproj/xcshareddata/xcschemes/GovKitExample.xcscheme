@@ -40,28 +40,6 @@
             parallelizable = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D7350EB2F23A92100B1027D"
-               BuildableName = "GovKitExampleTests.xctest"
-               BlueprintName = "GovKitExampleTests"
-               ReferencedContainer = "container:GovKitExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5D7350F52F23A92100B1027D"
-               BuildableName = "GovKitExampleUITests.xctest"
-               BlueprintName = "GovKitExampleUITests"
-               ReferencedContainer = "container:GovKitExample.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
-         <TestableReference
-            skipped = "NO"
-            parallelizable = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "5D7351112F23BF2E00B1027D"
                BuildableName = "GovKitTests.xctest"
                BlueprintName = "GovKitTests"
