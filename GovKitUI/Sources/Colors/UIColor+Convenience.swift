@@ -1,7 +1,7 @@
 import Foundation
 import UIKit
 
-extension UIColor {
+public extension UIColor {
     // Blue
     static let blueDarker80: UIColor = #colorLiteral(red: 0.02352941176, green: 0.0862745098, blue: 0.1450980392, alpha: 1)
     static let blueDarker75: UIColor = #colorLiteral(red: 0.03921568627, green: 0.1529411765, blue: 0.2509803922, alpha: 1)
