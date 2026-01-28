@@ -3,8 +3,8 @@ name: Sonar scan - Branch
 on:
   workflow_call:
     secrets:
-      SONAR_TOKEN:
-        description: 'A token to be used to send sonar scan results'
+      BW_ACCESS_TOKEN:
+        description: 'A token to be used to fetch bit warden secrets'
         required: true
 
 concurrency:
@@ -50,12 +50,9 @@ jobs:
             -Dsonar.projectVersion=$(./Scripts/app_version.sh) \
             -Dsonar.qualitygate.wait=true
         env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Check SonarCloud Results
         uses: sonarsource/sonarqube-quality-gate-action@d304d050d930b02a896b0f85935344f023928496 # pin@v1.1.0
         # Force to fail step after specific time
         timeout-minutes: 5
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
