@@ -1,4 +1,4 @@
-name: Sonar scan
+name: Sonar scan - PR
 
 on:
   workflow_call:
