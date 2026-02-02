@@ -5,7 +5,7 @@ extension GOVUKButton.ButtonConfiguration {
     public static var primary: GOVUKButton.ButtonConfiguration {
         .init(
             titleColorNormal: UIColor.govUK.text.buttonPrimary,
-            titleColorHighlighted: nil,
+            titleColorHighlighted:  UIColor.govUK.text.buttonPrimary,
             titleColorFocused: UIColor.govUK.text.buttonPrimaryFocussed,
             titleColorDisabled: UIColor.govUK.text.buttonPrimaryDisabled,
             titleFont: UIFont.govUK.bodySemibold,
@@ -65,7 +65,7 @@ extension GOVUKButton.ButtonConfiguration {
     public static var destructive: GOVUKButton.ButtonConfiguration {
         .init(
             titleColorNormal: UIColor.govUK.text.buttonPrimary,
-            titleColorHighlighted: nil,
+            titleColorHighlighted: UIColor.govUK.text.buttonPrimary,
             titleColorFocused: UIColor.govUK.text.buttonPrimaryFocussed,
             titleColorDisabled: UIColor.govUK.text.buttonPrimaryDisabled,
             titleFont: UIFont.govUK.bodySemibold,
