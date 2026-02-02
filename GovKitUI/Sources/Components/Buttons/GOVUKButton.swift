@@ -66,7 +66,8 @@ final public class GOVUKButton: UIButton {
 
     public override var intrinsicContentSize: CGSize {
         let titlesize = titleLabel?.intrinsicContentSize ?? .zero
-        let configInsets = configuration?.contentInsets ?? buttonConfiguration.contentEdgeInsets.directionalInsets
+        let configInsets = configuration?.contentInsets ??
+        buttonConfiguration.contentEdgeInsets.directionalInsets
         return CGSize(
             width: titlesize.width + configInsets.horizontal,
             height: titlesize.height + configInsets.vertical
@@ -268,6 +269,8 @@ final public class GOVUKButton: UIButton {
 
     public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
         super.traitCollectionDidChange(previousTraitCollection)
-        setNeedsUpdateConfiguration()
+        if previousTraitCollection?.verticalSizeClass != traitCollection.verticalSizeClass {
+            setNeedsUpdateConfiguration()
+        }
     }
 }
