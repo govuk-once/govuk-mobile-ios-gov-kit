@@ -17,15 +17,18 @@ struct GOVUKButtonTests {
 
     @Test
     func init_withConfig_noTitle_returnsExpectedResult() {
-        #expect(sut.backgroundColor == configuration.backgroundColorNormal)
-        #expect(sut.titleLabel?.textColor == configuration.titleColorNormal)
-        #expect(sut.titleLabel?.text == nil)
+        sut.updateConfiguration()
+        sut.layoutIfNeeded()
+        #expect(sut.configuration?.background.backgroundColor == configuration.backgroundColorNormal)
+        #expect(sut.attributedTitle(for: .normal) == nil)
     }
 
     @Test
     func setTitleText_setsTitle() {
         sut.setTitle("test button", for: .normal)
-        #expect(sut.titleLabel?.text == "test button")
+        sut.updateConfiguration()
+        sut.layoutIfNeeded()
+        #expect(sut.configuration?.title == "test button")
     }
 
     @Test
@@ -52,15 +55,17 @@ struct GOVUKButtonTests {
         sut.viewModel = expectedViewModel
 
         #expect(sut.viewModel?.localisedTitle == expectedViewModel.localisedTitle)
-        #expect(sut.title(for: .normal) == expectedViewModel.localisedTitle)
+        #expect(sut.configuration?.title == expectedViewModel.localisedTitle)
     }
 
     @Test
     func setButtonConfiguration_changesConfig() {
         let expectedConfig = GOVUKButton.ButtonConfiguration.primary
         sut.buttonConfiguration = expectedConfig
-
+        sut.setNeedsUpdateConfiguration()
+        sut.layoutIfNeeded()
         #expect(sut.buttonConfiguration.titleColorNormal == expectedConfig.titleColorNormal)
-        #expect(sut.titleColor(for: .normal) == expectedConfig.titleColorNormal)
+        #expect(sut.buttonConfiguration.backgroundColorNormal == expectedConfig.backgroundColorNormal)
+        #expect(sut.configuration?.background.backgroundColor == expectedConfig.backgroundColorNormal)
     }
 }

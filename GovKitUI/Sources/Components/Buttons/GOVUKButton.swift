@@ -3,7 +3,7 @@ import UIKit
 final public class GOVUKButton: UIButton {
     public var buttonConfiguration: ButtonConfiguration {
         didSet {
-            buttonConfigurationUpdate()
+            setNeedsUpdateConfiguration()
         }
     }
 
@@ -18,6 +18,7 @@ final public class GOVUKButton: UIButton {
         self.viewModel = viewModel
         self.buttonConfiguration = configuration
         super.init(frame: .zero)
+        self.configuration = UIButton.Configuration.plain()
         initialisation()
     }
 
@@ -32,16 +33,11 @@ final public class GOVUKButton: UIButton {
     }
 
     private func initialisation() {
-        titleLabel?.numberOfLines = 0
-        titleLabel?.lineBreakMode = .byWordWrapping
         titleLabel?.adjustsFontForContentSizeCategory = true
-
         viewModelUpdate()
-        buttonConfigurationUpdate()
         configureShadow()
         configureButtonShapesStyle()
         registerNotifications()
-        configureCornerRadius()
     }
 
     public override func didUpdateFocus(in context: UIFocusUpdateContext,
@@ -70,9 +66,11 @@ final public class GOVUKButton: UIButton {
 
     public override var intrinsicContentSize: CGSize {
         let titlesize = titleLabel?.intrinsicContentSize ?? .zero
+        let configInsets = configuration?.contentInsets ??
+        buttonConfiguration.contentEdgeInsets.directionalInsets
         return CGSize(
-            width: titlesize.width + contentEdgeInsets.horizontal,
-            height: titlesize.height + contentEdgeInsets.vertical
+            width: titlesize.width + configInsets.horizontal,
+            height: titlesize.height + configInsets.vertical
         )
     }
 
@@ -90,7 +88,7 @@ final public class GOVUKButton: UIButton {
     public override func accessibilityElementDidLoseFocus() {
         super.accessibilityElementDidLoseFocus()
         let state: UIControl.State = self.isEnabled ? .normal : .disabled
-        setTitleColor(buttonConfiguration.titleColorNormal, for: state)
+        configureFonts(state: state)
         configureBackgroundColor(state: state)
         configureBorderColor(state: state)
         configureShadow(state: state)
@@ -98,7 +96,7 @@ final public class GOVUKButton: UIButton {
 
     public override func accessibilityElementDidBecomeFocused() {
         super.accessibilityElementDidBecomeFocused()
-        setTitleColor(buttonConfiguration.titleColorFocused, for: .normal)
+        configureFonts(state: .focused)
         configureBackgroundColor(state: .focused)
         configureBorderColor(state: .focused)
         configureShadow(state: .focused)
@@ -115,12 +113,12 @@ final public class GOVUKButton: UIButton {
 
     public override var isEnabled: Bool {
         didSet {
-            buttonConfigurationUpdate()
+            setNeedsUpdateConfiguration()
         }
     }
 
     private func viewModelUpdate() {
-        setTitle(viewModel?.localisedTitle, for: .normal)
+        configuration?.title = viewModel?.localisedTitle
         accessibilityLabel = viewModel?.localisedAccessibilityLabel ?? viewModel?.localisedTitle
         removeAllActions()
         if let action = viewModel?.action {
@@ -128,12 +126,19 @@ final public class GOVUKButton: UIButton {
         }
     }
 
-    private func buttonConfigurationUpdate() {
+    public override func updateConfiguration() {
+        guard let configuration = configuration else { return }
+        var updatedConfiguration = configuration
+
+        updatedConfiguration.titleAlignment = buttonConfiguration.textAlignment.titleAlignment
+        updatedConfiguration.titleLineBreakMode = .byWordWrapping
+        updatedConfiguration.contentInsets = buttonConfiguration.contentEdgeInsets.directionalInsets
+        updatedConfiguration.cornerStyle = .fixed
+        updatedConfiguration.background.cornerRadius = buttonConfiguration.cornerRadius
+        self.configuration = updatedConfiguration
         configureFonts()
         configureBackgroundColor()
         configureAlignment()
-        configureInsets()
-        configureCornerRadius()
         configureBorderColor()
         configureShadow()
     }
@@ -159,19 +164,49 @@ final public class GOVUKButton: UIButton {
         }
     }
 
-    private func configureFonts() {
-        titleLabel?.font = buttonConfiguration.titleFont
-        setTitleColor(buttonConfiguration.titleColorNormal, for: .normal)
-        setTitleColor(buttonConfiguration.titleColorHighlighted, for: .highlighted)
-        setTitleColor(buttonConfiguration.titleColorFocused, for: .focused)
-        setTitleColor(buttonConfiguration.titleColorDisabled, for: .disabled)
+    private func configureFonts(state: UIControl.State? = nil) {
+        guard let configuration = configuration else { return }
+        let localState = state ?? self.state
+        var updatedConfiguration = configuration
+        let paragraphStyle = NSMutableParagraphStyle()
+        paragraphStyle.alignment = .center
+        updatedConfiguration.titleTextAttributesTransformer = .init { attributes in
+            var container = attributes
+            container.font = self.buttonConfiguration.titleFont
+            let fontColor = self.configureFontColor(state: localState)
+            container.foregroundColor = fontColor
+            container.underlineColor = fontColor
+            container.underlineStyle = UIAccessibility.buttonShapesEnabled ?
+            NSUnderlineStyle.single : []
+            container.paragraphStyle = paragraphStyle
+            return container
+        }
+        self.configuration = updatedConfiguration
+    }
+
+    private func configureFontColor(state: UIControl.State? = nil) -> UIColor? {
+        let localState = state ?? self.state
+        return switch localState {
+        case .normal:
+            accessibilityElementIsFocused() ?
+            buttonConfiguration.titleColorFocused :
+            buttonConfiguration.titleColorNormal
+        case .highlighted:
+            buttonConfiguration.titleColorHighlighted
+        case .focused:
+            buttonConfiguration.titleColorFocused
+        case .disabled:
+            buttonConfiguration.titleColorDisabled
+        default:
+            buttonConfiguration.titleColorNormal
+        }
     }
 
     private func configureBackgroundColor(state: UIControl.State? = nil) {
+        guard let configuraton = configuration else { return }
         let localState = state ?? self.state
-
+        var updateConfiguration = configuraton
         let color: UIColor
-
         if localState == .disabled {
             color = buttonConfiguration.backgroundColorDisabled
         } else if localState == .focused {
@@ -182,54 +217,60 @@ final public class GOVUKButton: UIButton {
             buttonConfiguration.accessibilityButtonShapesColor(for: localState) :
             buttonConfiguration.backgroundColor(for: localState)
         }
-        backgroundColor = color
+
+        updateConfiguration.background.backgroundColor = color
+        self.configuration = updateConfiguration
     }
 
     private func configureAlignment() {
-        titleLabel?.textAlignment = buttonConfiguration.textAlignment
         contentHorizontalAlignment = buttonConfiguration.contentHorizontalAlignment
         contentVerticalAlignment = buttonConfiguration.contentVerticalAlignment
     }
 
-    private func configureInsets() {
-        contentEdgeInsets = buttonConfiguration.contentEdgeInsets
-    }
-
-    private func configureCornerRadius() {
-        layer.cornerRadius = buttonConfiguration.cornerRadius
-        layer.cornerCurve = .continuous
-    }
-
-
     private func configureBorderColor(state: UIControl.State? = nil) {
-        layer.borderWidth = 0.5
+        guard let configuration = configuration else { return }
+        var updatedConfiguration = configuration
+        updatedConfiguration.background.strokeWidth = 0.5
         let localState = state ?? self.state
+        var borderColor: UIColor
         switch localState {
         case .normal:
-            layer.borderColor = buttonConfiguration.borderColorNormal.cgColor
+            borderColor = buttonConfiguration.borderColorNormal
         case .highlighted:
-            layer.borderColor = buttonConfiguration.borderColorHighlighted.cgColor
+            borderColor = buttonConfiguration.borderColorHighlighted
         default:
-            layer.borderColor = UIColor.clear.cgColor
+            borderColor = UIColor.clear
         }
+        updatedConfiguration.background.strokeColor = borderColor
+        self.configuration = updatedConfiguration
     }
 
     private func configureButtonShapesStyle() {
-        guard buttonConfiguration.backgroundColorNormal == .clear
+        guard buttonConfiguration.backgroundColorNormal == .clear,
+              let configuration = configuration
         else { return }
 
         configureBackgroundColor()
+        var updatedConfiguration = configuration
         if UIAccessibility.buttonShapesEnabled {
-            if contentEdgeInsets.left < 4 {
-                contentEdgeInsets = .init(
+            if updatedConfiguration.contentInsets.leading < 4 {
+                updatedConfiguration.contentInsets = .init(
                     top: 4,
-                    left: 4,
+                    leading: 4,
                     bottom: 4,
-                    right: 4
+                    trailing: 4
                 )
             }
         } else {
-            contentEdgeInsets = buttonConfiguration.contentEdgeInsets
+            updatedConfiguration.contentInsets = buttonConfiguration.contentEdgeInsets.directionalInsets
+        }
+        self.configuration = updatedConfiguration
+    }
+
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        if previousTraitCollection?.verticalSizeClass != traitCollection.verticalSizeClass {
+            setNeedsUpdateConfiguration()
         }
     }
 }
