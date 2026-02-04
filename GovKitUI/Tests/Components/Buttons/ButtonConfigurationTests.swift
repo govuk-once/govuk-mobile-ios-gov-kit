@@ -13,7 +13,7 @@ struct ButtonConfigurationTests {
 
         #expect(sut.titleColorNormal ==
                 UIColor.govUK.text.buttonPrimary)
-        #expect(sut.titleColorHighlighted == nil)
+        #expect(sut.titleColorHighlighted == UIColor.govUK.text.buttonPrimary)
         #expect(sut.titleColorFocused ==
                 UIColor.govUK.text.buttonPrimaryFocussed)
         #expect(sut.titleColorDisabled ==
@@ -151,7 +151,7 @@ struct ButtonConfigurationTests {
 
         #expect(sut.titleColorNormal ==
                 UIColor.govUK.text.buttonPrimary)
-        #expect(sut.titleColorHighlighted == nil)
+        #expect(sut.titleColorHighlighted == UIColor.govUK.text.buttonPrimary)
         #expect(sut.titleColorFocused ==
                 UIColor.govUK.text.buttonPrimaryFocussed)
         #expect(sut.titleColorDisabled ==
