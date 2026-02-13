@@ -46,7 +46,6 @@ struct GroupedListSectionView: View {
                     .padding(.horizontal, 16)
             }
         }
-        .padding(.horizontal)
     }
 
     @ViewBuilder
