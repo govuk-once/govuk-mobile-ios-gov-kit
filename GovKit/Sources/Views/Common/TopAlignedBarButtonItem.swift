@@ -37,6 +37,7 @@ public class TopAlignedBarButtonItem: UIBarButtonItem {
         NSLayoutConstraint.activate([
             actionButton.centerXAnchor.constraint(equalTo: localView.centerXAnchor),
             actionButton.topAnchor.constraint(equalTo: localView.topAnchor),
+            actionButton.bottomAnchor.constraint(equalTo: localView.bottomAnchor),
             localView.widthAnchor.constraint(equalTo: actionButton.widthAnchor)
         ])
         return localView
