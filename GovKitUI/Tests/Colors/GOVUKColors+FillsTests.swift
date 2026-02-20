@@ -313,7 +313,7 @@ struct GOVUKColors_FillsTests {
     func surfaceListUnselected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListUnselected
 
-        #expect(result.darkMode == .blueDarker75)
+        #expect(result.darkMode == .blueShade75)
     }
 
     @Test
