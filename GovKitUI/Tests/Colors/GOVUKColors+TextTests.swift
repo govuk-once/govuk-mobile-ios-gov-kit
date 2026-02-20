@@ -67,8 +67,8 @@ struct GOVUKColors_TextTests {
     func buttonSecondaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonSecondaryHighlight
 
-        #expect(result.lightMode == .blueDarker50)
-        #expect(result.darkMode == .blueLighter25)
+        #expect(result.lightMode == .blueShade50)
+        #expect(result.darkMode == .blueTint25)
     }
 
     @Test
@@ -99,8 +99,8 @@ struct GOVUKColors_TextTests {
     func buttonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.text.buttonCompactHighlight
 
-        #expect(result.lightMode == .blueDarker50)
-        #expect(result.darkMode == .blueLighter25)
+        #expect(result.lightMode == .blueShade50)
+        #expect(result.darkMode == .blueTint25)
     }
 
     @Test
@@ -164,7 +164,7 @@ struct GOVUKColors_TextTests {
         let result = UIColor.govUK.text.trailingIcon
 
         #expect(result.lightMode == .primaryBlue)
-        #expect(result.darkMode == .blueLighter95)
+        #expect(result.darkMode == .blueTint95)
     }
 
     @Test
