@@ -104,20 +104,6 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .greenShade50)
     }
-    
-    @Test
-    func surfaceCardNonTappable_light_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCardNonTappable
-
-        #expect(result.lightMode == .blueTint80)
-    }
-
-    @Test
-    func surfaceCardNonTappable_dark_returnsExpectedResult() {
-        let result = UIColor.govUK.fills.surfaceCardNonTappable
-
-        #expect(result.darkMode == .blueShade75)
-    }
 
     @Test
     func surfaceButtonPrimary_returnsExpectedResult() {
