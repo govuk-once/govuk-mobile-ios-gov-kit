@@ -61,7 +61,7 @@ extension GOVUKColors {
 
         public static let surfaceButtonPrimaryHighlight: UIColor = {
             .init(
-                light: .greenDarker25,
+                light: .greenShade25,
                 dark: .greenTint25
             )
         }()

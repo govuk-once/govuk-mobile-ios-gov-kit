@@ -20,7 +20,7 @@ public extension UIColor {
     // Green
     static let greenShade80: UIColor = #colorLiteral(red: 0.01176470588, green: 0.1058823529, blue: 0.07058823529, alpha: 1)
     static let greenShade50: UIColor = #colorLiteral(red: 0.03137254902, green: 0.2392156863, blue: 0.1607843137, alpha: 1)
-    static let greenDarker25: UIColor = #colorLiteral(red: 0.0431372549, green: 0.3607843137, blue: 0.2431372549, alpha: 1)
+    static let greenShade25: UIColor = #colorLiteral(red: 0.0431372549, green: 0.3607843137, blue: 0.2431372549, alpha: 1)
     static let primaryGreen: UIColor = #colorLiteral(red: 0.05882352941, green: 0.4784313725, blue: 0.3215686275, alpha: 1)
     static let accentGreen: UIColor = #colorLiteral(red: 0.4, green: 0.9529411765, blue: 0.6196078431, alpha: 1)
     static let greenTint25: UIColor = #colorLiteral(red: 0.2941176471, green: 0.6078431373, blue: 0.4901960784, alpha: 1)
