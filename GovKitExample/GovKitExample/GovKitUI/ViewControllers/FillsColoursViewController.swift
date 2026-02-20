@@ -9,7 +9,7 @@ class FillsColoursViewController: UIViewController {
         ("Surface Background", .govUK.fills.surfaceBackground),
         ("Surface List", .govUK.fills.surfaceList),
         ("Surface Card Default", .govUK.fills.surfaceCardDefault),
-        ("Surface Card Non Tappable", .govUK.fills.surfaceCardNonTappable)
+        ("Surface Card Non Tappable", .govUK.fills.surfaceCardNonTappable),
         ("Surface Card Blue", .govUK.fills.surfaceCardBlue),
         ("Surface Card Selected", .govUK.fills.surfaceCardSelected),
         ("Surface Button Primary", .govUK.fills.surfaceButtonPrimary),
