@@ -11,7 +11,7 @@ struct GOVUKColors_StrokesTests {
     func listDivider_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.listDivider
 
-        #expect(result.lightMode == .blueLighter80)
+        #expect(result.lightMode == .blueTint80)
         #expect(result.darkMode == .blueDarkMode)
     }
 
@@ -20,7 +20,7 @@ struct GOVUKColors_StrokesTests {
         let result = UIColor.govUK.strokes.buttonPrimaryFocused
 
         #expect(result.lightMode == .black)
-        #expect(result.darkMode == .yellowDarker50)
+        #expect(result.darkMode == .yellowShade50)
     }
 
     @Test
@@ -35,7 +35,7 @@ struct GOVUKColors_StrokesTests {
     func cardBlue_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardBlue
 
-        #expect(result.lightMode == .blueLighter50)
+        #expect(result.lightMode == .blueTint50)
         #expect(result.darkMode == .primaryBlue)
     }
 
@@ -43,21 +43,21 @@ struct GOVUKColors_StrokesTests {
     func cardGreen_light_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardGreen
 
-        #expect(result.lightMode == .greenLighter50)
+        #expect(result.lightMode == .greenTint50)
     }
 
     @Test
     func cardGreen_dark_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardGreen
 
-        #expect(result.darkMode == .greenLighter25)
+        #expect(result.darkMode == .greenTint25)
     }
 
     @Test
     func cardDefault_light_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.cardDefault
 
-        #expect(result.lightMode == .blueLighter80)
+        #expect(result.lightMode == .blueTint80)
     }
 
     @Test
@@ -87,15 +87,15 @@ struct GOVUKColors_StrokesTests {
     func buttonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonCompactHighlight
 
-        #expect(result.lightMode == .blueLighter25)
-        #expect(result.darkMode == .blueDarker25)
+        #expect(result.lightMode == .blueTint25)
+        #expect(result.darkMode == .blueShade25)
     }
 
     @Test
     func buttonPrimaryDefault_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonPrimaryDefault
 
-        #expect(result.lightMode == .greenDarker50)
+        #expect(result.lightMode == .greenShade50)
         #expect(result.darkMode == .primaryGreen)
     }
 
@@ -103,8 +103,8 @@ struct GOVUKColors_StrokesTests {
     func buttonPrimaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonPrimaryHighlight
 
-        #expect(result.lightMode == .greenDarker80)
-        #expect(result.darkMode == .greenDarker50)
+        #expect(result.lightMode == .greenShade80)
+        #expect(result.darkMode == .greenShade50)
     }
 
     @Test
@@ -112,14 +112,14 @@ struct GOVUKColors_StrokesTests {
         let result = UIColor.govUK.strokes.buttonFocused
 
         #expect(result.lightMode == .black)
-        #expect(result.darkMode == .yellowDarker50)
+        #expect(result.darkMode == .yellowShade50)
     }
 
     @Test
     func buttonDestructiveDefault_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonDestructiveDefault
 
-        #expect(result.lightMode == .redDarker50)
+        #expect(result.lightMode == .redShade50)
         #expect(result.darkMode == .primaryRed)
     }
 
@@ -127,8 +127,8 @@ struct GOVUKColors_StrokesTests {
     func buttonDestructiveHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.buttonDestructiveHighlight
 
-        #expect(result.lightMode == .redDarker80)
-        #expect(result.darkMode == .redDarker50)
+        #expect(result.lightMode == .redShade80)
+        #expect(result.darkMode == .redShade50)
     }
 
     @Test
@@ -151,7 +151,7 @@ struct GOVUKColors_StrokesTests {
     func surfaceCardEmergencyInfo_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.surfaceCardEmergencyInfo
 
-        #expect(result.lightMode == .blueLighter25)
-        #expect(result.darkMode == .blueLighter25)
+        #expect(result.lightMode == .blueTint25)
+        #expect(result.darkMode == .blueTint25)
     }
 }

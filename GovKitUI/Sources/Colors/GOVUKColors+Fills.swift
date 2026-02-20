@@ -6,49 +6,49 @@ extension GOVUKColors {
         public static let surfaceFixedContainer: UIColor = {
             .init(
                 light: .white.withAlphaComponent(0.75),
-                dark: .blueDarker80.withAlphaComponent(0.75)
+                dark: .blueShade80.withAlphaComponent(0.75)
             )
         }()
 
         public static let surfaceBackground: UIColor = {
             .init(
-                light: .blueLighter90,
-                dark: .blueDarker80
+                light: .blueTint90,
+                dark: .blueShade80
             )
         }()
 
         public static let surfaceFullscreen: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker80
+                dark: .blueShade80
             )
         }()
 
         public static let surfaceCardDefault: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker65
+                dark: .blueShade65
             )
         }()
 
         public static let surfaceCardBlue: UIColor = {
             .init(
-                light: .blueLighter95,
-                dark: .blueDarker50
+                light: .blueTint95,
+                dark: .blueShade50
             )
         }()
 
         public static let surfaceCardSelected: UIColor = {
             .init(
-                light: .greenLighter95,
-                dark: .greenDarker50
+                light: .greenTint95,
+                dark: .greenShade50
             )
         }()
 
         public static let surfaceCardNonTappable: UIColor = {
             .init(
-                light: .blueLighter80,
-                dark: .blueDarker75
+                light: .blueTint80,
+                dark: .blueShade75
             )
         }()
 
@@ -61,8 +61,8 @@ extension GOVUKColors {
 
         public static let surfaceButtonPrimaryHighlight: UIColor = {
             .init(
-                light: .greenDarker25,
-                dark: .greenLighter25
+                light: .greenShade25,
+                dark: .greenTint25
             )
         }()
 
@@ -91,15 +91,15 @@ extension GOVUKColors {
 
         public static let surfaceButtonCompact: UIColor = {
             .init(
-                light: .blueLighter95,
-                dark: .blueDarker80
+                light: .blueTint95,
+                dark: .blueShade80
             )
         }()
 
         public static let surfaceButtonCompactHighlight: UIColor = {
             .init(
-                light: .blueLighter95,
-                dark: .blueDarker80
+                light: .blueTint95,
+                dark: .blueShade80
             )
         }()
 
@@ -123,7 +123,7 @@ extension GOVUKColors {
 
         public static let surfaceButtonDestructiveHighlight: UIColor = {
             .init(
-                light: .redDarker25,
+                light: .redShade25,
                 dark: .primaryRed
             )
         }()
@@ -131,7 +131,7 @@ extension GOVUKColors {
         public static let surfaceModal: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker80
+                dark: .blueShade80
             )
         }()
 
@@ -145,7 +145,7 @@ extension GOVUKColors {
         public static let surfaceHomeHeaderBackground: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .blueDarker65
+                dark: .blueShade65
             )
         }()
 
@@ -159,28 +159,28 @@ extension GOVUKColors {
         public static let surfaceList: UIColor = {
             .init(
                 light: .white,
-                dark: .blueDarker70
+                dark: .blueShade70
             )
         }()
 
         public static let surfaceListHeading: UIColor = {
             .init(
-                light: .blueLighter95,
-                dark: .blueDarker50
+                light: .blueTint95,
+                dark: .blueShade50
             )
         }()
 
         public static let surfaceListSelected: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .blueDarker25
+                dark: .blueShade25
             )
         }()
 
         public static let surfaceListUnselected: UIColor = {
             .init(
-                light: .blueLighter90,
-                dark: .blueDarker75
+                light: .blueTint90,
+                dark: .blueShade75
             )
         }()
 

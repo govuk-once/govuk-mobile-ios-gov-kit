@@ -18,21 +18,21 @@ struct GOVUKColors_FillsTests {
     func surfaceFixedContainer_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceFixedContainer
 
-        #expect(result.darkMode == .blueDarker80.withAlphaComponent(0.75))
+        #expect(result.darkMode == .blueShade80.withAlphaComponent(0.75))
     }
 
     @Test
     func surfaceBackground_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceBackground
 
-        #expect(result.lightMode == .blueLighter90)
+        #expect(result.lightMode == .blueTint90)
     }
 
     @Test
     func surfaceBackground_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceBackground
 
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.darkMode == .blueShade80)
     }
 
     @Test
@@ -46,7 +46,7 @@ struct GOVUKColors_FillsTests {
     func surfaceFullscreen_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceFullscreen
 
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.darkMode == .blueShade80)
     }
 
     @Test
@@ -60,21 +60,21 @@ struct GOVUKColors_FillsTests {
     func surfaceCard_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .blueDarker65)
+        #expect(result.darkMode == .blueShade65)
     }
 
     @Test
     func surfaceCard_nonTappable_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardNonTappable
 
-        #expect(result.lightMode == .blueLighter80)
+        #expect(result.lightMode == .blueTint80)
     }
 
     @Test
     func surfaceCard_nonTappable_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardNonTappable
 
-        #expect(result.darkMode == .blueDarker75)
+        #expect(result.darkMode == .blueShade75)
     }
 
     @Test
@@ -88,21 +88,21 @@ struct GOVUKColors_FillsTests {
     func surfaceCardBlue_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardDefault
 
-        #expect(result.darkMode == .blueDarker65)
+        #expect(result.darkMode == .blueShade65)
     }
 
     @Test
     func surfaceCardSelected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardSelected
 
-        #expect(result.lightMode == .greenLighter95)
+        #expect(result.lightMode == .greenTint95)
     }
 
     @Test
     func surfaceCardSelected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceCardSelected
 
-        #expect(result.darkMode == .greenDarker50)
+        #expect(result.darkMode == .greenShade50)
     }
 
     @Test
@@ -117,8 +117,8 @@ struct GOVUKColors_FillsTests {
     func surfaceButtonPrimaryHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonPrimaryHighlight
 
-        #expect(result.lightMode == .greenDarker25)
-        #expect(result.darkMode == .greenLighter25)
+        #expect(result.lightMode == .greenShade25)
+        #expect(result.darkMode == .greenTint25)
     }
 
     @Test
@@ -161,16 +161,16 @@ struct GOVUKColors_FillsTests {
     func surfaceButtonCompact_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonCompact
 
-        #expect(result.lightMode == .blueLighter95)
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.lightMode == .blueTint95)
+        #expect(result.darkMode == .blueShade80)
     }
 
     @Test
     func surfaceButtonCompactHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonCompactHighlight
 
-        #expect(result.lightMode == .blueLighter95)
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.lightMode == .blueTint95)
+        #expect(result.darkMode == .blueShade80)
     }
 
     @Test
@@ -200,7 +200,7 @@ struct GOVUKColors_FillsTests {
     func surfaceButtonDestructiveHighlight_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceButtonDestructiveHighlight
 
-        #expect(result.lightMode == .redDarker25)
+        #expect(result.lightMode == .redShade25)
         #expect(result.darkMode == .primaryRed)
     }
 
@@ -215,7 +215,7 @@ struct GOVUKColors_FillsTests {
     func surfaceModal_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceModal
 
-        #expect(result.darkMode == .blueDarker80)
+        #expect(result.darkMode == .blueShade80)
     }
 
     @Test
@@ -243,7 +243,7 @@ struct GOVUKColors_FillsTests {
     func surfaceHomeHeaderBackground_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceHomeHeaderBackground
 
-        #expect(result.darkMode == .blueDarker65)
+        #expect(result.darkMode == .blueShade65)
     }
 
     @Test
@@ -271,21 +271,21 @@ struct GOVUKColors_FillsTests {
     func surfaceList_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceList
 
-        #expect(result.darkMode == .blueDarker70)
+        #expect(result.darkMode == .blueShade70)
     }
 
     @Test
     func surfaceListHeading_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListHeading
 
-        #expect(result.lightMode == .blueLighter95)
+        #expect(result.lightMode == .blueTint95)
     }
 
     @Test
     func surfaceListHeading_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListHeading
 
-        #expect(result.darkMode == .blueDarker50)
+        #expect(result.darkMode == .blueShade50)
     }
 
     @Test
@@ -299,21 +299,21 @@ struct GOVUKColors_FillsTests {
     func surfaceListSelected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListSelected
 
-        #expect(result.darkMode == .blueDarker25)
+        #expect(result.darkMode == .blueShade25)
     }
 
     @Test
     func surfaceListUnselected_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListUnselected
 
-        #expect(result.lightMode == .blueLighter90)
+        #expect(result.lightMode == .blueTint90)
     }
 
     @Test
     func surfaceListUnselected_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListUnselected
 
-        #expect(result.darkMode == .blueDarker75)
+        #expect(result.darkMode == .blueShade75)
     }
 
     @Test

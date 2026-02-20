@@ -5,7 +5,7 @@ extension GOVUKColors {
     public struct Strokes {
         public static let listDivider: UIColor = {
             .init(
-                light: .blueLighter80,
+                light: .blueTint80,
                 dark: .blueDarkMode
             )
         }()
@@ -20,13 +20,13 @@ extension GOVUKColors {
         public static let buttonPrimaryFocused: UIColor = {
             .init(
                 light: .black,
-                dark: .yellowDarker50
+                dark: .yellowShade50
             )
         }()
 
         public static let buttonDestructiveDefault: UIColor = {
             .init(
-                light: .redDarker50,
+                light: .redShade50,
                 dark: .primaryRed
             )
         }()
@@ -34,48 +34,48 @@ extension GOVUKColors {
         public static let buttonFocused: UIColor = {
             .init(
                 light: .black,
-                dark: .yellowDarker50
+                dark: .yellowShade50
             )
         }()
 
         public static let buttonDestructiveHighlight: UIColor = {
             .init(
-                light: .redDarker80,
-                dark: .redDarker50
+                light: .redShade80,
+                dark: .redShade50
             )
         }()
 
         public static let buttonPrimaryDefault: UIColor = {
             .init(
-                light: .greenDarker50,
+                light: .greenShade50,
                 dark: .primaryGreen
             )
         }()
 
         public static let buttonPrimaryHighlight: UIColor = {
             .init(
-                light: .greenDarker80,
-                dark: .greenDarker50
+                light: .greenShade80,
+                dark: .greenShade50
             )
         }()
 
         public static let cardBlue: UIColor = {
             .init(
-                light: .blueLighter50,
+                light: .blueTint50,
                 dark: .primaryBlue
             )
         }()
 
         public static let cardDefault: UIColor = {
-            .init(light: .blueLighter80,
+            .init(light: .blueTint80,
                   dark: .blueDarkMode
             )
         }()
 
         public static let cardGreen: UIColor = {
             .init(
-                light: .greenLighter50,
-                dark: .greenLighter25
+                light: .greenTint50,
+                dark: .greenTint25
             )
         }()
 
@@ -95,8 +95,8 @@ extension GOVUKColors {
 
         public static let buttonCompactHighlight: UIColor = {
             .init(
-                light: .blueLighter25,
-                dark: .blueDarker25
+                light: .blueTint25,
+                dark: .blueShade25
             )
         }()
 
@@ -116,8 +116,8 @@ extension GOVUKColors {
 
         public static let surfaceCardEmergencyInfo: UIColor = {
             .init(
-                light: .blueLighter25,
-                dark: .blueLighter25
+                light: .blueTint25,
+                dark: .blueTint25
             )
         }()
     }

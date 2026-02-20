@@ -75,8 +75,8 @@ extension GOVUKColors {
 
         public static let buttonSecondaryHighlight: UIColor = {
             .init(
-                light: .blueDarker50,
-                dark: .blueLighter25
+                light: .blueShade50,
+                dark: .blueTint25
             )
         }()
 
@@ -103,8 +103,8 @@ extension GOVUKColors {
 
         public static let buttonCompactHighlight: UIColor = {
             .init(
-                light: .blueDarker50,
-                dark: .blueLighter25
+                light: .blueShade50,
+                dark: .blueTint25
             )
         }()
 
@@ -139,7 +139,7 @@ extension GOVUKColors {
         public static let trailingIcon: UIColor = {
             .init(
                 light: .primaryBlue,
-                dark: .blueLighter95
+                dark: .blueTint95
             )
         }()
 
