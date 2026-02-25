@@ -15,7 +15,7 @@ final class HostingViewController<HostedView: HostableView>: UIViewController {
     init(viewModel: HostedView.ViewModel, showNavbar: Bool? = nil) {
         self.viewModel = viewModel
         self.hideNavbar = showNavbar
-        setUpNavBar()
+        applyNavBarTint()
 
         super.init(nibName: nil, bundle: nil)
     }
@@ -24,7 +24,7 @@ final class HostingViewController<HostedView: HostableView>: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func setUpNavBar(){
+    private func applyNavBarTint(){
         self.navigationController?.navigationBar.backgroundColor = .red
         self.navigationController?.navigationBar.tintColor = .accentGreen
     }

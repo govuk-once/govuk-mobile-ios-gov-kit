@@ -15,11 +15,17 @@ public final class HostingViewController<T>: UIHostingController<T> where T: Vie
         self.statusBarStyle = statusBarStyle
         self.navigationBarTintColor = navigationBarTintColor
         super.init(rootView: rootView)
+        applyNavBarTint()
     }
 
     @MainActor @preconcurrency
     required dynamic init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    private func applyNavBarTint(){
+        self.navigationController?.navigationBar.backgroundColor = .red
+        self.navigationController?.navigationBar.tintColor = .accentGreen
     }
 
     public override func viewWillAppear(_ animated: Bool) {
