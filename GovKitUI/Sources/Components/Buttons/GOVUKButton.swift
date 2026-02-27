@@ -107,8 +107,23 @@ final public class GOVUKButton: UIButton {
 
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
-
+        if #available(iOS 26, *) {
+            recenterLabel()
+        }
         updateConstraints()
+    }
+
+    private func recenterLabel() {
+        if let labelFrame = titleLabel?.frame {
+            let newX = (frame.width / 2.0) - (labelFrame.width / 2.0)
+            let newFrame = CGRect(
+                x: newX,
+                y: labelFrame.minY,
+                width: labelFrame.width,
+                height: labelFrame.height
+            )
+            titleLabel?.frame = newFrame
+        }
     }
 
     public override var isEnabled: Bool {
