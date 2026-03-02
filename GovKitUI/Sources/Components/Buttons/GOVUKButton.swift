@@ -108,9 +108,7 @@ final public class GOVUKButton: UIButton {
 
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
-        if #available(iOS 26, *) {
-            recenterLabel()
-        }
+        recenterLabel()
         updateConstraints()
     }
 
