@@ -1,5 +1,6 @@
 import UIKit
 
+// swiftlint:disable:next type_body_length
 final public class GOVUKButton: UIButton {
     public var buttonConfiguration: ButtonConfiguration {
         didSet {
@@ -107,8 +108,26 @@ final public class GOVUKButton: UIButton {
 
         guard let width = titleLabel?.frame.width else { return }
         titleLabel?.preferredMaxLayoutWidth = width
-
+        recenterLabel()
         updateConstraints()
+    }
+
+    // This is a fix for https://govukverify.atlassian.net/browse/GOVUKAPP-3236
+    // In iOS 26, the label text is off center after the first screen rotation
+    // Subsequent rotations are centered correctly.  The prior version of this class,
+    // that didn't use UIButton.Configuration, did not suffer from this issue.
+    // However, a root cause has not been identified.
+    private func recenterLabel() {
+        if let labelFrame = titleLabel?.frame {
+            let newX = (frame.width / 2.0) - (labelFrame.width / 2.0)
+            let newFrame = CGRect(
+                x: newX,
+                y: labelFrame.minY,
+                width: labelFrame.width,
+                height: labelFrame.height
+            )
+            titleLabel?.frame = newFrame
+        }
     }
 
     public override var isEnabled: Bool {
