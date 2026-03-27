@@ -22,6 +22,18 @@ public final class HostingViewController<T>: UIHostingController<T> where T: Vie
         fatalError("init(coder:) has not been implemented")
     }
 
+    public override func viewDidLoad() {
+        super.viewDidLoad()
+        if #available(iOS 16.4, *) {
+            NotificationCenter.default.addObserver(
+                forName: UIResponder.keyboardWillHideNotification,
+                object: nil,
+                queue: nil) { _ in
+                    self.safeAreaRegions.remove(.keyboard)
+                }
+        }
+    }
+
     public override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         guard let navigationController = navigationController else { return }
