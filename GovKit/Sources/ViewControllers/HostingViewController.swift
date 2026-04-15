@@ -24,12 +24,13 @@ public final class HostingViewController<T>: UIHostingController<T> where T: Vie
 
     public override func viewDidLoad() {
         super.viewDidLoad()
-        if #available(iOS 16.4, *) {
+        if #available(iOS 26, *) {
             NotificationCenter.default.addObserver(
                 forName: UIResponder.keyboardWillHideNotification,
                 object: nil,
                 queue: nil) { _ in
                     self.safeAreaRegions.remove(.keyboard)
+                    self.safeAreaRegions.insert(.keyboard)
                 }
         }
     }
