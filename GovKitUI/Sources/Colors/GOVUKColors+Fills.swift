@@ -218,5 +218,26 @@ extension GOVUKColors {
                 dark: .blueDarkMode
             )
         }()
+
+        public static let msgUnread: UIColor = {
+            .init(
+                light: .accentRed,
+                dark: .accentRed
+            )
+        }()
+
+        public static let msgRead: UIColor = {
+            .init(
+                light: .blackLighter80,
+                dark: .blackLighter25
+            )
+        }()
+
+        public static let surfaceCardMsgHeader: UIColor = {
+            .init(
+                light: .blackLighter95,
+                dark: .blueShade65
+            )
+        }()
     }
 }
