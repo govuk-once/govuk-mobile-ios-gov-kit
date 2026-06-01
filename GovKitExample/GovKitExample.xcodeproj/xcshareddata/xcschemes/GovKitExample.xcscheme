@@ -57,6 +57,17 @@
                ReferencedContainer = "container:GovKitExample.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "D0F919EA2FC5EBE900B892F4"
+               BuildableName = "GovKitUITests.xctest"
+               BlueprintName = "GovKitUITests"
+               ReferencedContainer = "container:GovKitExample.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

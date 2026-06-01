@@ -38,6 +38,13 @@
         "identifier" : "5D7351392F23C23F00B1027D",
         "name" : "GovKitUISnapshotTests"
       }
+    },
+    {
+      "target" : {
+        "containerPath" : "container:GovKitExample.xcodeproj",
+        "identifier" : "D0F919EA2FC5EBE900B892F4",
+        "name" : "GovKitUITests"
+      }
     }
   ],
   "version" : 1
