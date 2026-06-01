@@ -29,6 +29,13 @@
 			remoteGlobalIDString = 5D7350DE2F23A91F00B1027D;
 			remoteInfo = GovKitExample;
 		};
+		D0F919EF2FC5EBE900B892F4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D7350D72F23A91F00B1027D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D7350DE2F23A91F00B1027D;
+			remoteInfo = GovKitExample;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,7 @@
 		5D7351122F23BF2E00B1027D /* GovKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D73513A2F23C23F00B1027D /* GovKitUISnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovKitUISnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DD209272F23CA790059DCA8 /* GovKitExample.xctestplan */ = {isa = PBXFileReference; lastKnownFileType = text; path = GovKitExample.xctestplan; sourceTree = "<group>"; };
+		D0F919EB2FC5EBE900B892F4 /* GovKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GovKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -52,6 +60,11 @@
 		5D73513B2F23C23F00B1027D /* GovKitUISnapshotTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = GovKitUISnapshotTests;
+			sourceTree = "<group>";
+		};
+		D0F919EC2FC5EBE900B892F4 /* GovKitUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = GovKitUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -83,6 +96,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0F919E82FC5EBE900B892F4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -93,6 +113,7 @@
 				5D7350E12F23A91F00B1027D /* GovKitExample */,
 				5D7351132F23BF2E00B1027D /* GovKitTests */,
 				5D73513B2F23C23F00B1027D /* GovKitUISnapshotTests */,
+				D0F919EC2FC5EBE900B892F4 /* GovKitUITests */,
 				5D7351972F23C55A00B1027D /* Frameworks */,
 				5D7350E02F23A91F00B1027D /* Products */,
 			);
@@ -104,6 +125,7 @@
 				5D7350DF2F23A91F00B1027D /* GovKitExample.app */,
 				5D7351122F23BF2E00B1027D /* GovKitTests.xctest */,
 				5D73513A2F23C23F00B1027D /* GovKitUISnapshotTests.xctest */,
+				D0F919EB2FC5EBE900B892F4 /* GovKitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -191,6 +213,29 @@
 			productReference = 5D73513A2F23C23F00B1027D /* GovKitUISnapshotTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		D0F919EA2FC5EBE900B892F4 /* GovKitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D0F919F32FC5EBE900B892F4 /* Build configuration list for PBXNativeTarget "GovKitUITests" */;
+			buildPhases = (
+				D0F919E72FC5EBE900B892F4 /* Sources */,
+				D0F919E82FC5EBE900B892F4 /* Frameworks */,
+				D0F919E92FC5EBE900B892F4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D0F919F02FC5EBE900B892F4 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				D0F919EC2FC5EBE900B892F4 /* GovKitUITests */,
+			);
+			name = GovKitUITests;
+			packageProductDependencies = (
+			);
+			productName = GovKitUITests;
+			productReference = D0F919EB2FC5EBE900B892F4 /* GovKitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -198,7 +243,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 2620;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					5D7350DE2F23A91F00B1027D = {
@@ -210,6 +255,10 @@
 					};
 					5D7351392F23C23F00B1027D = {
 						CreatedOnToolsVersion = 26.2;
+						TestTargetID = 5D7350DE2F23A91F00B1027D;
+					};
+					D0F919EA2FC5EBE900B892F4 = {
+						CreatedOnToolsVersion = 26.5;
 						TestTargetID = 5D7350DE2F23A91F00B1027D;
 					};
 				};
@@ -235,6 +284,7 @@
 				5D7350DE2F23A91F00B1027D /* GovKitExample */,
 				5D7351112F23BF2E00B1027D /* GovKitTests */,
 				5D7351392F23C23F00B1027D /* GovKitUISnapshotTests */,
+				D0F919EA2FC5EBE900B892F4 /* GovKitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -255,6 +305,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		5D7351382F23C23F00B1027D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0F919E92FC5EBE900B892F4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -285,6 +342,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D0F919E72FC5EBE900B892F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -297,6 +361,11 @@
 			isa = PBXTargetDependency;
 			target = 5D7350DE2F23A91F00B1027D /* GovKitExample */;
 			targetProxy = 5D73513E2F23C23F00B1027D /* PBXContainerItemProxy */;
+		};
+		D0F919F02FC5EBE900B892F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D7350DE2F23A91F00B1027D /* GovKitExample */;
+			targetProxy = D0F919EF2FC5EBE900B892F4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -600,6 +669,56 @@
 			};
 			name = Release;
 		};
+		D0F919F12FC5EBE900B892F4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.gov.GovKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GovKitExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GovKitExample";
+			};
+			name = Debug;
+		};
+		D0F919F22FC5EBE900B892F4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = uk.gov.GovKitUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = NO;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GovKitExample.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/GovKitExample";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -635,6 +754,15 @@
 			buildConfigurations = (
 				5D7351412F23C23F00B1027D /* Debug */,
 				5D7351422F23C23F00B1027D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D0F919F32FC5EBE900B892F4 /* Build configuration list for PBXNativeTarget "GovKitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0F919F12FC5EBE900B892F4 /* Debug */,
+				D0F919F22FC5EBE900B892F4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
