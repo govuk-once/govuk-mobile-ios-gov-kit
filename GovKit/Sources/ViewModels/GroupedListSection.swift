@@ -128,17 +128,20 @@ public struct InformationRow: GroupedListRow,
     public let body: String?
     public let imageName: String?
     let detail: String
-    
+    let accessibilityLabel: String?
+
     public init(id: String,
                 title: String,
                 body: String?,
                 imageName: String? = nil,
-                detail: String) {
+                detail: String,
+                accessibilityLabel: String? = nil) {
         self.id = id
         self.title = title
         self.body = body
         self.imageName = imageName
         self.detail = detail
+        self.accessibilityLabel = accessibilityLabel
     }
 }
 

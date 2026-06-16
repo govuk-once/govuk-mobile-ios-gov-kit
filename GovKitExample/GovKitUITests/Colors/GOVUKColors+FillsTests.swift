@@ -275,6 +275,20 @@ struct GOVUKColors_FillsTests {
     }
 
     @Test
+    func surfaceListAlt_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListAlt
+
+        #expect(result.lightMode == .blueTint95)
+    }
+
+    @Test
+    func surfaceListAlt_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceListAlt
+
+        #expect(result.darkMode == .blueShade70)
+    }
+
+    @Test
     func surfaceListHeading_light_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceListHeading
 
