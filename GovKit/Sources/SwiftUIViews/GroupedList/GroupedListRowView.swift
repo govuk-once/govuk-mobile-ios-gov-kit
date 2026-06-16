@@ -37,6 +37,15 @@ struct InformationRowView: View {
     let row: InformationRow
 
     var body: some View {
+        if let accessibilityLabel = row.accessibilityLabel {
+            rowContentView
+                .accessibilityLabel(accessibilityLabel)
+        } else {
+            rowContentView
+        }
+    }
+
+    private var rowContentView: some View {
         HStack {
             if let imageName = row.imageName {
                 Image(imageName)
@@ -54,8 +63,8 @@ struct InformationRowView: View {
                 }
                 RowDetail(text: row.body)
             }
-
-        }.accessibilityElement(children: .combine)
+        }
+        .accessibilityElement(children: .combine)
     }
 }
 

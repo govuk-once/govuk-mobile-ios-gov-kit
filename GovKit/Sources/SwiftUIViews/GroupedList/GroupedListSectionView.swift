@@ -8,6 +8,7 @@ enum GroupedListSectionStyle {
 struct GroupedListSectionView: View {
     let section: GroupedListSection
     let style: GroupedListSectionStyle
+    var backgroundColor: UIColor?
     private let cornerRadius: CGFloat = 10
 
     var body: some View {
@@ -16,7 +17,9 @@ struct GroupedListSectionView: View {
                 titleView
             }
             ZStack {
-                Color(UIColor.govUK.fills.surfaceList)
+                Color(
+                    backgroundColor ?? UIColor.govUK.fills.surfaceList
+                )
                 VStack(spacing: 0) {
                     if style == .icon {
                         iconView

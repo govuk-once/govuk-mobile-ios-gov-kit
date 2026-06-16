@@ -2,28 +2,26 @@ import SwiftUI
 
 public struct GroupedList: View {
     var content: [GroupedListSection]
-    var backgroundColor: UIColor?
+    var sectionBackgroundColor: UIColor?
 
     public init(content: [GroupedListSection],
-                backgroundColor: UIColor? = nil) {
+                sectionBackgroundColor: UIColor? = nil) {
         self.content = content
-        self.backgroundColor = backgroundColor
+        self.sectionBackgroundColor = sectionBackgroundColor
     }
 
     public var body: some View {
         if content.count >= 1 {
-            ZStack {
-                Color(backgroundColor ?? .clear)
-                VStack(spacing: 16) {
-                    ForEach(content, id: \.rows.first?.id) { section in
-                        GroupedListSectionView(
-                            section: section,
-                            style: section.heading?.icon != nil ? .icon : .titled
-                        )
-                    }
+            VStack(spacing: 16) {
+                ForEach(content, id: \.rows.first?.id) { section in
+                    GroupedListSectionView(
+                        section: section,
+                        style: section.heading?.icon != nil ? .icon : .titled,
+                        backgroundColor: sectionBackgroundColor
+                    )
                 }
-                .frame(idealWidth: UIScreen.main.bounds.width)
             }
+            .frame(idealWidth: UIScreen.main.bounds.width)
         }
     }
 }
