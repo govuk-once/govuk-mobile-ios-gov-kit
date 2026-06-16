@@ -163,6 +163,13 @@ extension GOVUKColors {
             )
         }()
 
+        public static let surfaceListAlt: UIColor = {
+            .init(
+                light: .blueTint95,
+                dark: .blueShade70
+            )
+        }()
+
         public static let surfaceListHeading: UIColor = {
             .init(
                 light: .blueTint95,
