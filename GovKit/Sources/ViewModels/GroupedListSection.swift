@@ -5,7 +5,7 @@ public struct GroupedListSection {
     let heading: GroupedListHeader?
     let rows: [GroupedListRow]
     let footer: String?
-    
+
     public init(heading: GroupedListHeader?,
                 rows: [GroupedListRow],
                 footer: String?) {
@@ -60,7 +60,7 @@ public struct LinkRow: GroupedListRow,
     public let imageName: String?
     public let showLinkImage: Bool
     public let action: () -> Void
-    
+
     public init(id: String,
                 title: String,
                 body: String? = nil,
@@ -109,7 +109,7 @@ public struct NavigationRow: GroupedListRow,
     public let title: String
     public let body: String?
     let action: () -> Void
-    
+
     public init(id: String,
                 title: String,
                 body: String?,
@@ -157,9 +157,9 @@ public class ToggleRow: GroupedListRow,
     let action: ((Bool) -> Void)
 
     public init(id: String,
-         title: String,
-         isOn: Bool,
-         action: @escaping (Bool) -> Void) {
+                title: String,
+                isOn: Bool,
+                action: @escaping (Bool) -> Void) {
         self.title = title
         self.isOn = isOn
         self.action = action
@@ -167,105 +167,28 @@ public class ToggleRow: GroupedListRow,
     }
 }
 
-public struct GroupedListSection_Previews: PreviewProvider {
-    public static var previews: some View {
-        Text("preview")
-    }
+public class CountRow: GroupedListRow,
+                       ObservableObject {
 
-    public static var previewContent: [GroupedListSection] {
-        [
-            .init(
-                heading: GroupedListHeader(title: "Section 1",
-                                           icon: nil,
-                                           actionTitle: "See all",
-                                           action: { print("tap") }),
-                rows: [
-                    InformationRow(
-                        id: UUID().uuidString,
-                        title: "Information row",
-                        body: "Description",
-                        detail: "0.0.1"
-                    ),
-                    LinkRow(
-                        id: UUID().uuidString,
-                        title: "Link row",
-                        body: "A really long description to test how multiline text wrapping works",
-                        action: {
-                            print("link row tapped")
-                        }
-                    ),
-                    LinkRow(
-                        id: UUID().uuidString,
-                        title: "Link row with leading icon",
-                        body: nil,
-                        imageName: "step_by_step",
-                        showLinkImage: false,
-                        action: {
-                            print("link row tapped")
-                        }
-                    ),
-                    NavigationRow(
-                        id: UUID().uuidString,
-                        title: "Nav row",
-                        body: "Description",
-                        action: {
-                            print("nav row tapped")
-                        }
-                    ),
-                    ToggleRow(
-                        id: UUID().uuidString,
-                        title: "Toggle",
-                        isOn: false,
-                        action: { isOn in
-                            print("Toggled: \(isOn)")
-                        }
-                    )
-                ],
-                footer: "some really important text about this section that is long enough to wrap"
-            ),
-            .init(
-                heading: nil,
-                rows: [
-                    InformationRow(
-                        id: UUID().uuidString,
-                        title: "Information row",
-                        body: "Description",
-                        detail: "1.0"
-                    ),
-                    LinkRow(
-                        id: UUID().uuidString,
-                        title: "External link row",
-                        body: nil,
-                        action: {
-                            print("link row tapped")
-                        }
-                    ),
-                    NavigationRow(
-                        id: UUID().uuidString,
-                        title: "Navigation row",
-                        body: "Description",
-                        action: {
-                            print("nav row tapped")
-                        }
-                    )
-                ],
-                footer: nil
-            ),
-            .init(
-                heading: GroupedListHeader(
-                    title: "Section 2",
-                    icon: UIImage(systemName: "house")
-                ),
-                rows: [
-                    InformationRow(
-                        id: UUID().uuidString,
-                        title: "A really important piece of info",
-                        body: nil,
-                        detail: "1.0"
-                    )
-                ],
-                footer: "some really important text about this section"
-            )
-        ]
+    public enum State {
+        case loading
+        case idle(showIndicator: Bool, count: Int)
     }
+    public var id: String
+    public let title: String
+    public let state: State
+
+    let action: (() -> Void)
+
+    public init(
+        id: String,
+        title: String,
+        state: State,
+        action: @escaping () -> Void) {
+            self.id = id
+            self.title = title
+            self.state = state
+
+            self.action = action
+        }
 }

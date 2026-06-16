@@ -385,4 +385,46 @@ struct GOVUKColors_FillsTests {
 
         #expect(result.darkMode == .blueDarkMode)
     }
+
+    @Test
+    func msgUnread_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.msgUnread
+
+        #expect(result.lightMode == .accentRed)
+    }
+
+    @Test
+    func msgUnread_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.msgUnread
+
+        #expect(result.darkMode == .accentRed)
+    }
+
+    @Test
+    func msgRead_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.msgRead
+
+        #expect(result.lightMode == .blackLighter80)
+    }
+
+    @Test
+    func msgRead_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.msgRead
+
+        #expect(result.darkMode == .blackLighter25)
+    }
+
+    @Test
+    func surfaceCardMsgHeader_light_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardMsgHeader
+
+        #expect(result.lightMode == .blackLighter95)
+    }
+
+    @Test
+    func surfaceCardMsgHeader_dark_returnsExpectedResult() {
+        let result = UIColor.govUK.fills.surfaceCardMsgHeader
+
+        #expect(result.darkMode == .blueShade65)
+    }
 }
