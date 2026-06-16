@@ -27,13 +27,13 @@ struct GroupedListRowView: View {
 
 #Preview {
     VStack {
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[0])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[1])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[2])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[3])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[4])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[5])
-        GroupedListRowView(row: GroupedList_Previews.previewContent.first!.rows[6])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[0])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[1])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[2])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[3])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[4])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[5])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[6])
     }
 }
 
