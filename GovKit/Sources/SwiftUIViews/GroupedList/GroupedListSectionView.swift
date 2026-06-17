@@ -108,12 +108,12 @@ struct GroupedListSectionView: View {
     ZStack {
         Color(UIColor.govUK.Fills.surfaceBackground)
         VStack {
-            let titledSection = GroupedListSection_Previews.previewContent.first!
+            let titledSection = GroupedListPreviewFixtures.previewContent.first!
             GroupedListSectionView(
                 section: titledSection,
                 style: .titled
             )
-            let iconSection = GroupedListSection_Previews.previewContent.last!
+            let iconSection = GroupedListPreviewFixtures.previewContent.last!
             GroupedListSectionView(
                 section: iconSection,
                 style: .icon

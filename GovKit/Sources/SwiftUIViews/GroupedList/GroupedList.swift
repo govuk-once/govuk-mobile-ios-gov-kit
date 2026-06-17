@@ -25,3 +25,7 @@ public struct GroupedList: View {
         }
     }
 }
+
+#Preview {
+    GroupedList(content: GroupedListPreviewFixtures.previewContent)
+}

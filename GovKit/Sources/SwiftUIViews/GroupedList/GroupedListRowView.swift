@@ -16,6 +16,8 @@ struct GroupedListRowView: View {
                 ToggleRowView(row: row)
             case let row as DetailRow:
                 DetailRowView(row: row)
+            case let row as CountRow:
+                CountRowView(row: row)
             default:
                 EmptyView()
             }
@@ -25,11 +27,13 @@ struct GroupedListRowView: View {
 
 #Preview {
     VStack {
-        GroupedListRowView(row: GroupedListSection_Previews.previewContent.first!.rows[0])
-        GroupedListRowView(row: GroupedListSection_Previews.previewContent.first!.rows[1])
-        GroupedListRowView(row: GroupedListSection_Previews.previewContent.first!.rows[2])
-        GroupedListRowView(row: GroupedListSection_Previews.previewContent.first!.rows[3])
-        GroupedListRowView(row: GroupedListSection_Previews.previewContent.first!.rows[4])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[0])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[1])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[2])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[3])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[4])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[5])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[6])
     }
 }
 
@@ -175,8 +179,54 @@ struct ToggleRowView: View {
     }
 }
 
+struct CountRowView: View {
+    let row: CountRow
+
+    private var buttonDisabled: Bool {
+        if case .loading = row.state {
+            return true
+        }
+        return false
+    }
+
+    var body: some View {
+        Button {
+            row.action()
+        } label: {
+            VStack(alignment: .leading) {
+                HStack(spacing: 0) {
+                    Text(row.title)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(
+                            Color(
+                                UIColor.govUK.text.primary
+                            )
+                        )
+                    Spacer()
+                        .padding(.trailing, 8)
+
+                    switch row.state {
+                    case .loading:
+                        ProgressView()
+                    case .idle(let showIndicator, let count):
+                        Circle()
+                            .fill(Color(showIndicator ? UIColor.govUK.fills.msgUnread: .clear))
+                            .frame(width: 10, height: 10)
+                            .padding(.trailing, 8)
+
+                        Text("\(count)")
+                            .foregroundColor(Color(UIColor.govUK.text.link))
+                    }
+                }
+            }
+        }
+        .disabled(buttonDisabled)
+    }
+}
+
 struct RowDetail: View {
     let text: String?
+
 
     var body: some View {
         Group {
