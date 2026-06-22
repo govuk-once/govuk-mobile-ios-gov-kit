@@ -35,48 +35,41 @@ extension UIFont {
 }
 
 public struct GOVUKUIFontBuilder {
-    public let largeTitle = UIFont(style: .largeTitle, weight: .regular)
-    public let largeTitleBold = UIFont(style: .largeTitle, weight: .bold)
+    public let largeTitle = GOVUKTransportFontProvider.font(style: .largeTitle, weight: .regular)
+    public let largeTitleBold = GOVUKTransportFontProvider.font(style: .largeTitle, weight: .bold)
 
-    public let title1 = UIFont(style: .title1, weight: .regular)
-    public let title1Bold = UIFont(style: .title1, weight: .bold)
+    public let title1 = GOVUKTransportFontProvider.font(style: .title1, weight: .regular)
+    public let title1Bold = GOVUKTransportFontProvider.font(style: .title1, weight: .bold)
 
-    public let title2 = UIFont(style: .title2, weight: .regular)
-    public let title2Bold = UIFont(style: .title2, weight: .bold)
+    public let title2 = GOVUKTransportFontProvider.font(style: .title2, weight: .regular)
+    public let title2Bold = GOVUKTransportFontProvider.font(style: .title2, weight: .bold)
 
-    public let title3 = UIFont(style: .title3, weight: .regular)
-    public let title3Semibold = UIFont(style: .title3, weight: .semibold)
+    public let title3 = GOVUKTransportFontProvider.font(style: .title3, weight: .regular)
+    public let title3Semibold = GOVUKTransportFontProvider.font(style: .title3, weight: .semibold)
 
-    public let headlineSemibold = UIFont(style: .headline, weight: .semibold)
-    // no semibold italic
+    public let headlineSemibold = GOVUKTransportFontProvider.font(style: .headline, weight: .semibold)
 
-    public let body = UIFont(style: .body, weight: .regular)
-    public var bodyItalic: UIFont { body.italic() }
-    public let bodySemibold = UIFont(style: .body, weight: .semibold)
-    // no semibold italic
+    public let body = GOVUKTransportFontProvider.font(style: .body, weight: .regular)
+    public var bodyItalic: UIFont { GOVUKTransportFontProvider.font(style: .body, weight: .regular, italic: true) }
+    public let bodySemibold = GOVUKTransportFontProvider.font(style: .body, weight: .semibold)
 
-    public let callout = UIFont(style: .callout, weight: .regular)
-    public var calloutItalic: UIFont { callout.italic() }
-    public let calloutSemibold = UIFont(style: .callout, weight: .semibold)
-    // no semibold italic
+    public let callout = GOVUKTransportFontProvider.font(style: .callout, weight: .regular)
+    public var calloutItalic: UIFont { GOVUKTransportFontProvider.font(style: .callout, weight: .regular, italic: true) }
+    public let calloutSemibold = GOVUKTransportFontProvider.font(style: .callout, weight: .semibold)
 
-    public let subheadline = UIFont(style: .subheadline, weight: .regular)
-    public var subheadlineItalic: UIFont { subheadline.italic() }
-    public let subheadlineSemibold = UIFont(style: .subheadline, weight: .semibold)
-    // no semibold italic
+    public let subheadline = GOVUKTransportFontProvider.font(style: .subheadline, weight: .regular)
+    public var subheadlineItalic: UIFont { GOVUKTransportFontProvider.font(style: .subheadline, weight: .regular, italic: true) }
+    public let subheadlineSemibold = GOVUKTransportFontProvider.font(style: .subheadline, weight: .semibold)
 
-    public let footnote = UIFont(style: .footnote, weight: .regular)
-    public var footnoteItalic: UIFont { footnote.italic() }
-    public let footnoteSemibold = UIFont(style: .footnote, weight: .semibold)
-    // no semibold italic
+    public let footnote = GOVUKTransportFontProvider.font(style: .footnote, weight: .regular)
+    public var footnoteItalic: UIFont { GOVUKTransportFontProvider.font(style: .footnote, weight: .regular, italic: true) }
+    public let footnoteSemibold = GOVUKTransportFontProvider.font(style: .footnote, weight: .semibold)
 
-    public let caption1 = UIFont(style: .caption1, weight: .regular)
-    public var caption1Italic: UIFont { caption1.italic() }
-    public let caption1Medium = UIFont(style: .caption1, weight: .medium)
-    // no medium italic
+    public let caption1 = GOVUKTransportFontProvider.font(style: .caption1, weight: .regular)
+    public var caption1Italic: UIFont { GOVUKTransportFontProvider.font(style: .caption1, weight: .regular, italic: true) }
+    public let caption1Medium = GOVUKTransportFontProvider.font(style: .caption1, weight: .medium)
 
-    public let caption2 = UIFont(style: .caption2, weight: .regular)
-    public var caption2Italic: UIFont { caption2.italic() }
-    public let caption2Semibold = UIFont(style: .caption2, weight: .semibold)
-    // no semibold italic
+    public let caption2 = GOVUKTransportFontProvider.font(style: .caption2, weight: .regular)
+    public var caption2Italic: UIFont { GOVUKTransportFontProvider.font(style: .caption2, weight: .regular, italic: true) }
+    public let caption2Semibold = GOVUKTransportFontProvider.font(style: .caption2, weight: .semibold)
 }

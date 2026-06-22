@@ -35,6 +35,9 @@ let package = Package(
             path: "GovKitUI",
             sources: [
                 "Sources"
+            ],
+            resources: [
+                .process("Resources")
             ]
         ),
         .testTarget(

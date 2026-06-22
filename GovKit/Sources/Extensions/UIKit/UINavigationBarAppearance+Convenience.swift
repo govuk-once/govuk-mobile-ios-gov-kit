@@ -9,10 +9,12 @@ extension UINavigationBarAppearance {
         appearance.configureWithTransparentBackground()
         appearance.backgroundColor = UIColor.govUK.fills.surfaceHomeHeaderBackground
         appearance.titleTextAttributes = [
-            .foregroundColor: UIColor.govUK.text.header
+            .foregroundColor: UIColor.govUK.text.header,
+            .font: UIFont.govUK.bodySemibold
         ]
         appearance.largeTitleTextAttributes = [
-            .foregroundColor: UIColor.govUK.text.header
+            .foregroundColor: UIColor.govUK.text.header,
+            .font: UIFont.govUK.largeTitleBold
         ]
         return appearance
     }
