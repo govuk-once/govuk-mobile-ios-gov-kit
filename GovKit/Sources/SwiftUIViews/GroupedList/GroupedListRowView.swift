@@ -60,8 +60,10 @@ struct InformationRowView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(row.title)
+                        .font(Font.govUK.body)
                     Spacer()
                     Text(row.detail)
+                        .font(Font.govUK.body)
                         .foregroundColor(
                             Color(
                                 UIColor.govUK.text.secondary
@@ -88,6 +90,7 @@ struct LinkRowView: View {
                         Image(imageName)
                     }
                     Text(row.title)
+                        .font(Font.govUK.body)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(Color(UIColor.govUK.text.link))
                     Spacer()
@@ -106,7 +109,7 @@ struct LinkRowView: View {
 
 struct DetailRowView: View {
     var row: DetailRow
-    
+
     var body: some View {
         Button {
             row.action()
@@ -114,15 +117,16 @@ struct DetailRowView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(row.title)
+                        .font(Font.govUK.body)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(row.destructive ?
                                          Color(UIColor.govUK.text.buttonDestructive) :
                                             Color(UIColor.govUK.text.primary))
                     Spacer()
                     Text(row.body)
-                    .font(Font.govUK.body)
-                    .multilineTextAlignment(.leading)
-                    .foregroundColor(Color(UIColor.govUK.text.link))
+                        .font(Font.govUK.body)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(Color(UIColor.govUK.text.link))
                 }
                 RowDetail(text: row.body)
             }
@@ -143,6 +147,7 @@ struct NavigationRowView: View {
             VStack(alignment: .leading) {
                 HStack {
                     Text(row.title)
+                        .font(Font.govUK.body)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(
                             Color(
@@ -193,6 +198,7 @@ struct ToggleRowView: View {
             Spacer()
             Toggle(isOn: $row.isOn) {
                 Text(row.title)
+                    .font(Font.govUK.body)
                     .foregroundColor(
                         Color(
                             UIColor.govUK.text.primary
@@ -222,6 +228,7 @@ struct CountRowView: View {
             VStack(alignment: .leading) {
                 HStack(spacing: 0) {
                     Text(row.title)
+                        .font(Font.govUK.body)
                         .multilineTextAlignment(.leading)
                         .foregroundColor(
                             Color(
@@ -241,6 +248,7 @@ struct CountRowView: View {
                             .padding(.trailing, 8)
 
                         Text("\(count)")
+                            .font(Font.govUK.body)
                             .foregroundColor(Color(UIColor.govUK.text.link))
                     }
                 }
