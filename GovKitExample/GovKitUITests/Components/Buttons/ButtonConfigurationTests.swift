@@ -75,16 +75,12 @@ struct ButtonConfigurationTests {
                 UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
         #expect(sut.backgroundColorDisabled == .clear)
 
-        #expect(sut.shadowColor ==
-                UIColor.govUK.strokes.buttonSecondaryDefault.cgColor)
-        #expect(sut.shadowHighLightedColor ==
-                UIColor.govUK.strokes.buttonSecondaryHighlight.cgColor)
-        #expect(sut.shadowFocusedColor ==
-                UIColor.govUK.strokes.buttonSecondaryFocused.cgColor)
+        #expect(sut.borderColorNormal ==
+                UIColor.govUK.strokes.buttonSecondaryDefault)
+        #expect(sut.borderColorHighlighted ==
+                UIColor.govUK.strokes.buttonSecondaryHighlight)
 
-        #expect(sut.borderColorNormal == .clear)
-
-        #expect(sut.cornerRadius == 4)
+        #expect(sut.cornerRadius == 15)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         #expect(accessibilityNormal == sut.accessibilityButtonShapesColor)

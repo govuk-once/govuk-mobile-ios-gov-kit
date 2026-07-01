@@ -148,14 +148,6 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
-    func buttonSecondaryFocused_returnsExpectedResult() {
-        let result = UIColor.govUK.strokes.buttonSecondaryFocused
-
-        #expect(result.lightMode == .black)
-        #expect(result.darkMode == .black)
-    }
-
-    @Test
     func fixedContainer_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.fixedContainer
 

@@ -32,10 +32,13 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonSecondaryHighlight,
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonSecondaryFocussed,
             backgroundColorDisabled: .clear,
+            cornerRadius: 15,
+            borderColorNormal: UIColor.govUK.strokes.buttonSecondaryDefault,
+            borderColorHighlighted: UIColor.govUK.strokes.buttonSecondaryHighlight,
             accessibilityButtonShapesColor: UIColor.grey100,
-            shadowColor: UIColor.govUK.strokes.buttonSecondaryDefault.cgColor,
-            shadowHighLightedColor: UIColor.govUK.strokes.buttonSecondaryHighlight.cgColor,
-            shadowFocusedColor: UIColor.govUK.strokes.buttonSecondaryFocused.cgColor,
+            shadowColor: UIColor.clear.cgColor,
+            shadowHighLightedColor: UIColor.clear.cgColor,
+            shadowFocusedColor: UIColor.clear.cgColor,
             shadowOpacity: 0
         )
     }
