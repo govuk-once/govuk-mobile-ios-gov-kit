@@ -132,6 +132,30 @@ struct GOVUKColors_StrokesTests {
     }
 
     @Test
+    func buttonSecondaryDefault_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonSecondaryDefault
+
+        #expect(result.lightMode == .primaryBlue)
+        #expect(result.darkMode == .accentBlue)
+    }
+
+    @Test
+    func buttonSecondaryHighlight_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonSecondaryHighlight
+
+        #expect(result.lightMode == .blueShade50)
+        #expect(result.darkMode == .blueTint25)
+    }
+
+    @Test
+    func buttonSecondaryFocused_returnsExpectedResult() {
+        let result = UIColor.govUK.strokes.buttonSecondaryFocused
+
+        #expect(result.lightMode == .black)
+        #expect(result.darkMode == .black)
+    }
+
+    @Test
     func fixedContainer_returnsExpectedResult() {
         let result = UIColor.govUK.strokes.fixedContainer
 

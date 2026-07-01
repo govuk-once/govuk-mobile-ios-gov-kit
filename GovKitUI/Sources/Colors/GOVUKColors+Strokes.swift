@@ -59,6 +59,27 @@ extension GOVUKColors {
             )
         }()
 
+        public static let buttonSecondaryDefault: UIColor = {
+            .init(
+                light: .primaryBlue,
+                dark: .accentBlue
+            )
+        }()
+
+        public static let buttonSecondaryHighlight: UIColor = {
+            .init(
+                light: .blueShade50,
+                dark: .blueTint25
+            )
+        }()
+
+        public static let buttonSecondaryFocused: UIColor = {
+            .init(
+                light: .black,
+                dark: .black
+            )
+        }()
+
         public static let cardBlue: UIColor = {
             .init(
                 light: .blueTint50,

@@ -76,9 +76,11 @@ struct ButtonConfigurationTests {
         #expect(sut.backgroundColorDisabled == .clear)
 
         #expect(sut.shadowColor ==
-                UIColor.clear.cgColor)
+                UIColor.govUK.strokes.buttonSecondaryDefault.cgColor)
         #expect(sut.shadowHighLightedColor ==
-                UIColor.clear.cgColor)
+                UIColor.govUK.strokes.buttonSecondaryHighlight.cgColor)
+        #expect(sut.shadowFocusedColor ==
+                UIColor.govUK.strokes.buttonSecondaryFocused.cgColor)
 
         #expect(sut.borderColorNormal == .clear)
 
