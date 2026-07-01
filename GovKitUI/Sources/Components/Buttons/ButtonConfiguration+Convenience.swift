@@ -33,9 +33,9 @@ extension GOVUKButton.ButtonConfiguration {
             backgroundColorFocused: UIColor.govUK.fills.surfaceButtonSecondaryFocussed,
             backgroundColorDisabled: .clear,
             accessibilityButtonShapesColor: UIColor.grey100,
-            shadowColor: UIColor.clear.cgColor,
-            shadowHighLightedColor: UIColor.clear.cgColor,
-            shadowFocusedColor: UIColor.clear.cgColor,
+            shadowColor: UIColor.govUK.strokes.buttonSecondaryDefault.cgColor,
+            shadowHighLightedColor: UIColor.govUK.strokes.buttonSecondaryHighlight.cgColor,
+            shadowFocusedColor: UIColor.govUK.strokes.buttonSecondaryFocused.cgColor,
             shadowOpacity: 0
         )
     }
