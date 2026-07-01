@@ -10,6 +10,10 @@ public struct GOVUKButtonBuilder {
         GOVUKButton(.secondary)
     }
 
+    public var groupedSecondary: GOVUKButton {
+        GOVUKButton(.groupedSecondary)
+    }
+
     public var compact: GOVUKButton {
         GOVUKButton(.compact)
     }

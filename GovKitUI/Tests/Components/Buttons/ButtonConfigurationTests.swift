@@ -82,7 +82,45 @@ struct ButtonConfigurationTests {
 
         #expect(sut.cornerRadius == 15)
 
-        #expect(sut.cornerRadius == 4)
+        let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
+        #expect(accessibilityNormal == sut.accessibilityButtonShapesColor)
+
+        let accessibilityHighlighted = sut.accessibilityButtonShapesColor(for: .highlighted)
+        #expect(
+            accessibilityHighlighted ==
+            sut.accessibilityButtonShapesColor.withAlphaComponent(0.7)
+        )
+
+        let accessibilityFocussed = sut.accessibilityButtonShapesColor(for: .focused)
+        #expect(
+            accessibilityFocussed ==
+            sut.accessibilityButtonShapesColor
+        )
+    }
+
+    @Test
+    func groupedSecondary_returnsExpectedConfiguration() {
+        let sut = GOVUKButton.ButtonConfiguration.groupedSecondary
+
+        #expect(sut.titleColorNormal ==
+                UIColor.govUK.text.buttonSecondary)
+        #expect(sut.titleColorHighlighted ==
+                UIColor.govUK.text.buttonSecondaryHighlight)
+        #expect(sut.titleColorFocused ==
+                UIColor.govUK.text.buttonSecondaryFocussed)
+        #expect(sut.titleColorDisabled ==
+                UIColor.govUK.text.buttonSecondaryDisabled)
+        #expect(sut.titleFont == UIFont.govUK.body)
+        #expect(sut.backgroundColorNormal == .clear)
+        #expect(sut.backgroundColorHighlighted == .clear)
+        #expect(sut.backgroundColorFocused ==
+                UIColor.govUK.fills.surfaceButtonSecondaryFocussed)
+        #expect(sut.backgroundColorDisabled == .clear)
+
+        #expect(sut.borderColorNormal == .clear)
+        #expect(sut.borderColorHighlighted == .clear)
+
+        #expect(sut.cornerRadius == 15)
 
         let accessibilityNormal = sut.accessibilityButtonShapesColor(for: .normal)
         #expect(accessibilityNormal == sut.accessibilityButtonShapesColor)
