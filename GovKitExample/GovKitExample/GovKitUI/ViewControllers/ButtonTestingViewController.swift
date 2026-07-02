@@ -20,6 +20,9 @@ class ButtonTestingViewController: UIViewController {
         let secondaryButton = GOVUKButton(.secondary)
         secondaryButton.setTitle("Secondary", for: .normal)
 
+        let groupedSecondaryButton = GOVUKButton(.groupedSecondary)
+        groupedSecondaryButton.setTitle("Grouped Secondary", for: .normal)
+
         let compactButton = GOVUKButton(.compact)
         compactButton.setTitle("Compact", for: .normal)
 

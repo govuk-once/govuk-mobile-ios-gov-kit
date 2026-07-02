@@ -28,6 +28,16 @@ class GOVUKButtonSnapshotTests: SnapshotTestCase {
         VerifySnapshotInWindow(nav)
     }
 
+    func test_groupedSecondary_rendersCorrectly() {
+        let viewController = ButtonStateViewController(
+            viewModel: .init(title: "Grouped Secondary", config: .groupedSecondary, width: 200)
+        )
+        let nav = UINavigationController(rootViewController: viewController)
+        nav.navigationBar.prefersLargeTitles = true
+
+        VerifySnapshotInWindow(nav)
+    }
+
     func test_compact_rendersCorrectly() {
         let viewController = ButtonStateViewController(
             viewModel: .init(title: "Compact", config: .compact, width: 120)
@@ -99,6 +109,35 @@ class GOVUKButtonSnapshotTests: SnapshotTestCase {
     func test_secondary_button_disabled() {
         let button = GOVUKButton(.secondary)
         button.setTitle("secondary", for: .normal)
+        button.isEnabled = false
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        VerifySnapshot(button)
+    }
+
+    func test_groupedSecondary_button_default() {
+        let button = GOVUKButton(.groupedSecondary)
+        button.setTitle("grouped secondary", for: .normal)
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        VerifySnapshot(button)
+    }
+
+    func test_groupedSecondary_button_highlighted() {
+        let button = GOVUKButton(.groupedSecondary)
+        button.setTitle("grouped secondary", for: .normal)
+        button.isHighlighted = true
+
+        button.frame.size = CGSize(width: 200, height: 47)
+
+        VerifySnapshot(button)
+    }
+
+    func test_groupedSecondary_button_disabled() {
+        let button = GOVUKButton(.groupedSecondary)
+        button.setTitle("grouped secondary", for: .normal)
         button.isEnabled = false
 
         button.frame.size = CGSize(width: 200, height: 47)

@@ -43,6 +43,26 @@ extension GOVUKButton.ButtonConfiguration {
         )
     }
 
+    public static var groupedSecondary: GOVUKButton.ButtonConfiguration {
+        .init(
+            titleColorNormal: UIColor.govUK.text.buttonSecondary,
+            titleColorHighlighted: UIColor.govUK.text.buttonSecondaryHighlight,
+            titleColorFocused: UIColor.govUK.text.buttonSecondaryFocussed,
+            titleColorDisabled: UIColor.govUK.text.buttonSecondaryDisabled,
+            titleFont: UIFont.govUK.body,
+            backgroundColorNormal: UIColor.govUK.fills.surfaceButtonSecondary,
+            backgroundColorHighlighted: UIColor.govUK.fills.surfaceButtonSecondaryHighlight,
+            backgroundColorFocused: UIColor.govUK.fills.surfaceButtonSecondaryFocussed,
+            backgroundColorDisabled: .clear,
+            cornerRadius: 15,
+            accessibilityButtonShapesColor: UIColor.grey100,
+            shadowColor: UIColor.clear.cgColor,
+            shadowHighLightedColor: UIColor.clear.cgColor,
+            shadowFocusedColor: UIColor.clear.cgColor,
+            shadowOpacity: 0
+        )
+    }
+
     public static var compact: GOVUKButton.ButtonConfiguration {
         .init(
             titleColorNormal: UIColor.govUK.text.buttonCompact,

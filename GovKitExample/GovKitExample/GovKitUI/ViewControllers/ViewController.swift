@@ -42,14 +42,23 @@ class ViewController: UIViewController {
         button3.viewModel = button3VM
 
         let button4VM = GOVUKButton.ButtonViewModel(
+            localisedTitle: "grouped secondary button",
+            action: { [weak self] in
+                self?.pushSwiftUIView()
+            })
+
+        let button4 = GOVUKButton(.groupedSecondary)
+        button4.viewModel = button4VM
+
+        let button5VM = GOVUKButton.ButtonViewModel(
             localisedTitle: "compact",
             action: { [weak self] in
                 self?.pushSwiftUIView()
             }
         )
 
-        let button4 = GOVUKButton(.compact)
-        button4.viewModel = button4VM
+        let button5 = GOVUKButton(.compact)
+        button5.viewModel = button5VM
 
         let label = UILabel()
         label.text = "Caption2 label"

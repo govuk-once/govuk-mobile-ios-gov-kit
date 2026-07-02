@@ -32,6 +32,17 @@ final class SwiftUIButtonSnapshotTests: SnapshotTestCase {
         VerifySnapshotInWindow(nav)
     }
 
+    func test_groupedSecondary_swiftui_rendersCorrectly() {
+        let view = SwiftUIButtonStateView(
+            viewModel: .init(title: "Grouped Secondary", config: .groupedSecondary, width: 200)
+        )
+        let hosting = UIHostingController(rootView: view)
+        let nav = UINavigationController(rootViewController: hosting)
+        nav.navigationBar.prefersLargeTitles = true
+
+        VerifySnapshotInWindow(nav)
+    }
+
     func test_compact_swiftui_rendersCorrectly() {
         let view = SwiftUIButtonStateView(
             viewModel: .init(title: "Compact", config: .compact, width: 120)
