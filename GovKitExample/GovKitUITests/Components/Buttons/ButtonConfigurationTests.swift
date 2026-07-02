@@ -100,7 +100,7 @@ struct ButtonConfigurationTests {
 
     @Test
     func groupedSecondary_returnsExpectedConfiguration() {
-        let sut = GOVUKButton.ButtonConfiguration.secondary
+        let sut = GOVUKButton.ButtonConfiguration.groupedSecondary
 
         #expect(sut.titleColorNormal ==
                 UIColor.govUK.text.buttonSecondary)
