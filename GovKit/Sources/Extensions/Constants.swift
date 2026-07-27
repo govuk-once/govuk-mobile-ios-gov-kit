@@ -12,7 +12,12 @@ public struct Constants {
         }()
         public static let govukBaseUrl: URL = govukBaseComponents.url!
 
-        public static let appStoreAppUrl = URL(string: "https://beta.itunes.apple.com/v1/app/6572293285")!
+        public static let appStoreAppUrl = URL(
+            string: "https://itunes.apple.com/v1/app/6572293285"
+        )!
+        public static let testFlightAppUrl = URL(
+            string: "https://beta.itunes.apple.com/v1/app/6572293285"
+        )!
 
         public static let helpAndFeedbackUrl: URL = {
             var components = govukBaseComponents
@@ -48,23 +53,7 @@ public struct Constants {
             return components.url!
         }()
 
-        public static let defaultSearchUrl: URL = URL(string: "https://search.service.gov.uk")!
-
-        public static var searchSuggestionsPath: String = "/api/search/autocomplete.json"
-
-        public static var defaultSearchPath: String = "/v0_1/search.json"
-
         public static let authenticationCallbackUri: String = "govuk://govuk/login-auth-callback"
-
-        public static var defaultLocalAuthorityURL: URL = URL(
-            string: "https://www.gov.uk"
-        )!
-
-        public static var localAuthorityPath: String = "/api/local-authority"
-
-        public static var manageAccountURL: URL = URL(
-            string: "https://home.account.gov.uk/"
-        )!
     }
 
     public struct SigningKey {
