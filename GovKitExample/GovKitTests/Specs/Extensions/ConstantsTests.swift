@@ -14,7 +14,12 @@ struct ConstantsTests {
 
     @Test
     func appStoreAppUrl_returnsExpectedResult() {
-        #expect(Constants.API.appStoreAppUrl.absoluteString == "https://beta.itunes.apple.com/v1/app/6572293285")
+        #expect(Constants.API.appStoreAppUrl.absoluteString == "https://itunes.apple.com/v1/app/6572293285")
+    }
+
+    @Test
+    func testFlightAppUrl_returnsExpectedResult() {
+        #expect(Constants.API.testFlightAppUrl.absoluteString == "https://beta.itunes.apple.com/v1/app/6572293285")
     }
 
     @Test
@@ -40,26 +45,5 @@ struct ConstantsTests {
     @Test
     func privacyPolicyUrl_returnsExpectedResult() {
         #expect(Constants.API.privacyPolicyUrl.absoluteString == "https://www.gov.uk/government/publications/govuk-app-privacy-notice-how-we-use-your-data")
-    }
-
-    @Test
-    func defaultSearchUrl_returnsExpectedResult() {
-        #expect(Constants.API.defaultSearchUrl.absoluteString == "https://search.service.gov.uk")
-    }
-
-    @Test
-    func defaultSearchPath_returnsExpectedResult() {
-        #expect(Constants.API.defaultSearchPath == "/v0_1/search.json")
-    }
-
-    @Test
-    func defaultSearchPath_canChange() {
-        let originalString = Constants.API.defaultSearchPath
-
-        let expectedPath = UUID().uuidString
-        Constants.API.defaultSearchPath = expectedPath
-        #expect(Constants.API.defaultSearchPath == expectedPath)
-
-        Constants.API.defaultSearchPath = originalString
     }
 }
