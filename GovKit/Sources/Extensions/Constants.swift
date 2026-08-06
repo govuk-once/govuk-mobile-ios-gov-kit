@@ -48,7 +48,7 @@ public struct Constants {
         public static let privacyPolicyUrl: URL = {
             var components = govukBaseComponents
             components.path = """
-            /government/publications/govuk-test-app-privacy-notice/govuk-test-app-privacy-notice
+            /government/publications/govuk-app-privacy-notice-how-we-use-your-data
             """
             return components.url!
         }()
