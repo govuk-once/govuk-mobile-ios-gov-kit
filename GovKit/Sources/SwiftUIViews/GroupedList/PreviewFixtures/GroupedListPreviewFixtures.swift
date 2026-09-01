@@ -71,6 +71,13 @@ class GroupedListPreviewFixtures {
                         action: {
                             print("Count row tapped")
                         }
+                    ),
+                    SelectableRow(
+                        id: UUID().uuidString,
+                        title: "Selectable",
+                        action: {
+                            print("Selectable row tapped")
+                        }
                     )
                 ],
                 footer: "some really important text about this section that is long enough to wrap"
