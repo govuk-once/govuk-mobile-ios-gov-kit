@@ -18,6 +18,8 @@ struct GroupedListRowView: View {
                 DetailRowView(row: row)
             case let row as CountRow:
                 CountRowView(row: row)
+            case let row as SelectableRow:
+                SelectableRowView(row: row)
             default:
                 EmptyView()
             }
@@ -34,6 +36,7 @@ struct GroupedListRowView: View {
         GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[4])
         GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[5])
         GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[6])
+        GroupedListRowView(row: GroupedListPreviewFixtures.previewContent.first!.rows[7])
     }
 }
 
@@ -154,6 +157,29 @@ struct NavigationRowView: View {
                             )
                         )
                         .font(Font.govUK.bodySemibold)
+                }
+            }
+        }
+    }
+}
+
+struct SelectableRowView: View {
+    let row: SelectableRow
+
+    var body: some View {
+        Button {
+            row.action()
+        } label: {
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(row.title)
+                        .multilineTextAlignment(.leading)
+                        .foregroundColor(
+                            Color(
+                                UIColor.govUK.text.primary
+                            )
+                        )
+                    Spacer()
                 }
             }
         }
