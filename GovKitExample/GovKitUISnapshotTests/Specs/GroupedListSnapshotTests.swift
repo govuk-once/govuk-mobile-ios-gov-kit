@@ -41,7 +41,8 @@ class GroupedListSnapshotTests: SnapshotTestCase {
                 ToggleRow(id: "4", title: "Row title 4", isOn: true, action: {_ in }),
                 DetailRow(id: "5", title: "Row title 5", body: "Body text", accessibilityHint: "", action: {}),
                 CountRow(id: "6", title: "Row title 6",
-                         state: .idle(showIndicator: true, count: 1), action: {})
+                         state: .idle(showIndicator: true, count: 1), action: {}),
+                SelectableRow(id: "7", title: "Row title 7", action: {})
             ],
             footer: "Footer"
         )

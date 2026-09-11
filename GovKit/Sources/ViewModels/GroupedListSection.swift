@@ -192,3 +192,19 @@ public class CountRow: GroupedListRow,
             self.action = action
         }
 }
+
+public class SelectableRow: GroupedListRow,
+                             Identifiable {
+    public let id: String
+    public let title: String
+    let action: () -> Void
+
+    public init(id: String,
+                title: String,
+                action: @escaping () -> Void) {
+        self.id = id
+        self.title = title
+        self.action = action
+    }
+}
+
