@@ -44,7 +44,7 @@ struct ConstantsTests {
 
     @Test
     func privacyPolicyUrl_returnsExpectedResult() {
-        #expect(Constants.API.privacyPolicyUrl.absoluteString == "https://www.gov.uk/government/publications/govuk-app-privacy-notice-how-we-use-your-data")
+        #expect(Constants.API.privacyPolicyUrl.absoluteString == "https://www.gov.uk/government/publications/govuk-test-app-privacy-notice/govuk-test-app-privacy-notice")
     }
 
     @Test
