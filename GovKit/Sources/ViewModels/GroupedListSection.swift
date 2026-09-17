@@ -197,13 +197,16 @@ public class SelectableRow: GroupedListRow,
                              Identifiable {
     public let id: String
     public let title: String
+    public let imageName: String?
     let action: () -> Void
 
     public init(id: String,
                 title: String,
+                imageName: String? = nil,
                 action: @escaping () -> Void) {
         self.id = id
         self.title = title
+        self.imageName = imageName
         self.action = action
     }
 }
