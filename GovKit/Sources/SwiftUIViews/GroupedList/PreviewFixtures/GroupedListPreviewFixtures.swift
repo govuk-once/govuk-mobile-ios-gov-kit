@@ -75,6 +75,7 @@ class GroupedListPreviewFixtures {
                     SelectableRow(
                         id: UUID().uuidString,
                         title: "Selectable",
+                        imageName: nil,
                         action: {
                             print("Selectable row tapped")
                         }

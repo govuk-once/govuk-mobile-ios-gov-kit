@@ -180,6 +180,11 @@ struct SelectableRowView: View {
                             )
                         )
                     Spacer()
+
+                    if let imageName = row.imageName {
+                        Image(systemName: imageName)
+                        .foregroundColor(Color(UIColor.govUK.text.iconTertiary))
+                    }
                 }
             }
         }
