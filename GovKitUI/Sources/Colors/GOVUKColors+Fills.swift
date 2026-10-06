@@ -131,7 +131,7 @@ extension GOVUKColors {
         public static let surfaceModal: UIColor = {
             .init(
                 light: .white,
-                dark: .blueShade80
+                dark: .blueShade90
             )
         }()
 
