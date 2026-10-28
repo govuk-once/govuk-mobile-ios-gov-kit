@@ -56,6 +56,22 @@ class GroupedListPreviewFixtures {
                             print("Toggled: \(isOn)")
                         }
                     ),
+                    SelectableRow(
+                        id: UUID().uuidString,
+                        title: "Selectable",
+                        trailingIconName: nil,
+                        action: {
+                            print("Selectable row tapped")
+                        }
+                    ),
+                    SelectableRow(
+                        id: UUID().uuidString,
+                        title: "Selectable with icon",
+                        trailingIconName: "ellipsis",
+                        action: {
+                            print("Selectable row tapped")
+                        }
+                    ),
                     CountRow(
                         id: UUID().uuidString,
                         title: "Count",
@@ -70,14 +86,6 @@ class GroupedListPreviewFixtures {
                         state: .loading,
                         action: {
                             print("Count row tapped")
-                        }
-                    ),
-                    SelectableRow(
-                        id: UUID().uuidString,
-                        title: "Selectable",
-                        imageName: nil,
-                        action: {
-                            print("Selectable row tapped")
                         }
                     )
                 ],
