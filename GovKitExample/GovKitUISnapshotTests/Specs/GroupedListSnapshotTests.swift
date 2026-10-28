@@ -31,6 +31,16 @@ class GroupedListSnapshotTests: SnapshotTestCase {
         VerifySnapshotInNavigationController(view: groupedList, mode: .dark)
     }
 
+    func test_selectableRowWithoutTrailingIcon_light_rendersCorrectly() {
+        let groupedList = GroupedList(content: [selectableRowsSection])
+        VerifySnapshotInNavigationController(view: groupedList, mode: .light)
+    }
+
+    func test_selectableRowWithoutTrailingIcon_dark_rendersCorrectly() {
+        let groupedList = GroupedList(content: [selectableRowsSection])
+        VerifySnapshotInNavigationController(view: groupedList, mode: .dark)
+    }
+
     private var testSection: GroupedListSection = {
         GroupedListSection(
             heading: .init(title: "Section 1 header"),
@@ -45,6 +55,17 @@ class GroupedListSnapshotTests: SnapshotTestCase {
                 SelectableRow(id: "7", title: "Row title 7", action: {})
             ],
             footer: "Footer"
+        )
+    }()
+
+    private var selectableRowsSection: GroupedListSection = {
+        GroupedListSection(
+            heading: .init(title: "Selectable Rows"),
+            rows: [
+                SelectableRow(id: "1", title: "Selectable without icon", action: {}),
+                SelectableRow(id: "2", title: "Selectable with icon", trailingIconName: "ellipsis", action: {})
+            ],
+            footer: "Selectable rows with and without trailing icons"
         )
     }()
 }
