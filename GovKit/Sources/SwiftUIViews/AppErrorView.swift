@@ -19,7 +19,8 @@ public struct AppErrorView: View {
     }
 
     private var warningImage: some View {
-        Image(systemName: "exclamationmark.circle")
+        let imageName = viewModel?.errorType == .network ? "wifi.slash" : "exclamationmark.circle"
+        return Image(systemName: imageName)
             .resizable()
             .frame(width: 31, height: 31)
             .foregroundColor(Color(uiColor: .govUK.text.trailingIcon))
