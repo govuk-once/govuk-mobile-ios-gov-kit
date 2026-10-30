@@ -23,7 +23,7 @@ public struct AppErrorView: View {
             .resizable()
             .frame(width: 31, height: 31)
             .foregroundColor(Color(uiColor: .govUK.text.trailingIcon))
-            .fontWeight(.bold)
+            .fontWeight(.regular)
             .accessibilityHidden(true)
     }
 
@@ -71,4 +71,25 @@ public struct AppErrorView: View {
         )
         .opacity(viewModel?.buttonTitle == nil ? 0 : 1)
     }
+}
+
+#Preview {
+    VStack(spacing: 32) {
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "Network Unavailable",
+            body: "Please check your internet connection and try again.",
+            buttonTitle: "Retry",
+            errorType: .network,
+            action: {}
+        ))
+
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "There’s a problem",
+            body: "An unexpected error occurred. Please try again later.",
+            buttonTitle: "Dismiss",
+            errorType: .generic,
+            action: {}
+        ))
+    }
+    .padding()
 }
