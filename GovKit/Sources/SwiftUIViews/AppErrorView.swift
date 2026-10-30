@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 public struct AppErrorView: View {
     public var viewModel: AppErrorViewModel?
 
@@ -19,11 +18,12 @@ public struct AppErrorView: View {
     }
 
     private var warningImage: some View {
-        Image(systemName: "exclamationmark.circle")
+        let imageName = viewModel?.errorType == .network ? "wifi.slash" : "exclamationmark.circle"
+        return Image(systemName: imageName)
             .resizable()
             .frame(width: 31, height: 31)
             .foregroundColor(Color(uiColor: .govUK.text.trailingIcon))
-            .fontWeight(.light)
+            .fontWeight(.regular)
             .accessibilityHidden(true)
     }
 
@@ -45,6 +45,14 @@ public struct AppErrorView: View {
             viewModel?.action?()
         }
         .foregroundColor(Color(UIColor.govUK.text.buttonSecondary))
+        .padding(.vertical, 13)
+        .padding(.horizontal, 16)
+        .frame(maxWidth: .infinity)
+        .background(Color(UIColor.govUK.fills.surfaceButtonSecondary))
+        .cornerRadius(15)
+        .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color(UIColor.govUK.strokes.buttonSecondaryDefault), lineWidth: 1))
+        .font(.govUK.body)
+        .padding(.horizontal, 20)
         .accessibilityLabel(
             Text(viewModel?.buttonAccessibilityLabel
                  ?? viewModel?.buttonTitle
@@ -63,4 +71,25 @@ public struct AppErrorView: View {
         )
         .opacity(viewModel?.buttonTitle == nil ? 0 : 1)
     }
+}
+
+#Preview {
+    VStack(spacing: 32) {
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "Network Unavailable",
+            body: "Please check your internet connection and try again.",
+            buttonTitle: "Retry",
+            errorType: .network,
+            action: {}
+        ))
+
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "There’s a problem",
+            body: "An unexpected error occurred. Please try again later.",
+            buttonTitle: "Dismiss",
+            errorType: .generic,
+            action: {}
+        ))
+    }
+    .padding()
 }

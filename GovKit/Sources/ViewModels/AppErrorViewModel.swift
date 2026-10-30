@@ -1,24 +1,32 @@
 import SwiftUI
 
 public struct AppErrorViewModel {
+    public enum ErrorType {
+        case network
+        case generic
+    }
+
     var title: String?
     var body: String?
     var buttonTitle: String?
     var buttonAccessibilityLabel: String?
     var isWebLink: Bool = false
+    var errorType: ErrorType = .generic
     var action: (() -> Void)?
-    
+
     public init(title: String? = nil,
                 body: String? = nil,
                 buttonTitle: String? = nil,
                 buttonAccessibilityLabel: String? = nil,
                 isWebLink: Bool = false,
+                errorType: ErrorType = .generic,
                 action: ( () -> Void)? = nil) {
         self.title = title
         self.body = body
         self.buttonTitle = buttonTitle
         self.buttonAccessibilityLabel = buttonAccessibilityLabel
         self.isWebLink = isWebLink
+        self.errorType = errorType
         self.action = action
     }
 
@@ -27,6 +35,7 @@ public struct AppErrorViewModel {
             title: String.common.localized("networkUnavailableErrorTitle"),
             body: String.common.localized("networkUnavailableErrorBody"),
             buttonTitle: String.common.localized("networkUnavailableButtonTitle"),
+            errorType: .network,
             action: {
                 action()
             }
