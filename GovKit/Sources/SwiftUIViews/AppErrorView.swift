@@ -23,7 +23,7 @@ public struct AppErrorView: View {
             .resizable()
             .frame(width: 31, height: 31)
             .foregroundColor(Color(uiColor: .govUK.text.trailingIcon))
-            .fontWeight(.light)
+            .fontWeight(.bold)
             .accessibilityHidden(true)
     }
 
@@ -52,6 +52,7 @@ public struct AppErrorView: View {
         .cornerRadius(15)
         .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color(UIColor.govUK.strokes.buttonSecondaryDefault), lineWidth: 1))
         .font(.govUK.body)
+        .padding(.horizontal, 20)
         .accessibilityLabel(
             Text(viewModel?.buttonAccessibilityLabel
                  ?? viewModel?.buttonTitle
