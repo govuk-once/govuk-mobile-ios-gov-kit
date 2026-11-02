@@ -12,7 +12,9 @@ public struct AppErrorView: View {
                 warningImage
                 errorTitle
                 errorBody
-                actionButton
+                if viewModel?.buttonTitle != nil {
+                    actionButton
+                }
             }
             .padding(.vertical, 16)
     }
@@ -79,6 +81,14 @@ public struct AppErrorView: View {
             title: "Network Unavailable",
             body: "Please check your internet connection and try again.",
             buttonTitle: "Retry",
+            errorType: .network,
+            action: {}
+        ))
+
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "Try Again",
+            body: "Error message without button",
+            buttonTitle: nil,
             errorType: .network,
             action: {}
         ))
