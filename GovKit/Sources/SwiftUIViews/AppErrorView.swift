@@ -47,14 +47,6 @@ public struct AppErrorView: View {
             viewModel?.action?()
         }
         .foregroundColor(Color(UIColor.govUK.text.buttonSecondary))
-        .padding(.vertical, 13)
-        .padding(.horizontal, 16)
-        .frame(maxWidth: .infinity)
-        .background(Color(UIColor.govUK.fills.surfaceButtonSecondary))
-        .cornerRadius(15)
-        .overlay(RoundedRectangle(cornerRadius: 15).stroke(Color(UIColor.govUK.strokes.buttonSecondaryDefault), lineWidth: 1))
-        .font(.govUK.body)
-        .padding(.horizontal, 20)
         .accessibilityLabel(
             Text(viewModel?.buttonAccessibilityLabel
                  ?? viewModel?.buttonTitle
