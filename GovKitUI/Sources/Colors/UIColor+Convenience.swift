@@ -3,6 +3,7 @@ import UIKit
 
 public extension UIColor {
     // Blue
+    static let blueShade90: UIColor = #colorLiteral(red: 0.01176470588, green: 0.0431372549, blue: 0.07058823529, alpha: 1)
     static let blueShade80: UIColor = #colorLiteral(red: 0.02352941176, green: 0.0862745098, blue: 0.1450980392, alpha: 1)
     static let blueShade75: UIColor = #colorLiteral(red: 0.03921568627, green: 0.1529411765, blue: 0.2509803922, alpha: 1)
     static let blueShade70: UIColor = #colorLiteral(red: 0.03529411765, green: 0.1333333333, blue: 0.2156862745, alpha: 1)
