@@ -1,6 +1,5 @@
 import SwiftUI
 
-
 public struct AppErrorView: View {
     public var viewModel: AppErrorViewModel?
 
@@ -13,17 +12,20 @@ public struct AppErrorView: View {
                 warningImage
                 errorTitle
                 errorBody
-                actionButton
+                if viewModel?.buttonTitle != nil {
+                    actionButton
+                }
             }
             .padding(.vertical, 16)
     }
 
     private var warningImage: some View {
-        Image(systemName: "exclamationmark.circle")
+        let imageName = viewModel?.errorType == .network ? "wifi.slash" : "exclamationmark.circle"
+        return Image(systemName: imageName)
             .resizable()
             .frame(width: 31, height: 31)
             .foregroundColor(Color(uiColor: .govUK.text.trailingIcon))
-            .fontWeight(.light)
+            .fontWeight(.regular)
             .accessibilityHidden(true)
     }
 
@@ -63,4 +65,33 @@ public struct AppErrorView: View {
         )
         .opacity(viewModel?.buttonTitle == nil ? 0 : 1)
     }
+}
+
+#Preview {
+    VStack(spacing: 32) {
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "Network Unavailable",
+            body: "Please check your internet connection and try again.",
+            buttonTitle: "Retry",
+            errorType: .network,
+            action: {}
+        ))
+
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "Try Again",
+            body: "Error message without button",
+            buttonTitle: nil,
+            errorType: .network,
+            action: {}
+        ))
+
+        AppErrorView(viewModel: AppErrorViewModel(
+            title: "There’s a problem",
+            body: "An unexpected error occurred. Please try again later.",
+            buttonTitle: "Dismiss",
+            errorType: .generic,
+            action: {}
+        ))
+    }
+    .padding()
 }

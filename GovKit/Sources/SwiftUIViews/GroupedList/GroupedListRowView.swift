@@ -181,8 +181,8 @@ struct SelectableRowView: View {
                         )
                     Spacer()
 
-                    if let imageName = row.imageName {
-                        Image(systemName: imageName)
+                    if let trailingIconName = row.trailingIconName {
+                        Image(systemName: trailingIconName)
                         .foregroundColor(Color(UIColor.govUK.text.iconTertiary))
                     }
                 }
