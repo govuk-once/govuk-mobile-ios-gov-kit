@@ -215,7 +215,7 @@ struct GOVUKColors_FillsTests {
     func surfaceModal_dark_returnsExpectedResult() {
         let result = UIColor.govUK.fills.surfaceModal
 
-        #expect(result.darkMode == .blueShade80)
+        #expect(result.darkMode == .blueShade90)
     }
 
     @Test
